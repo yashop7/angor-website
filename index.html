@@ -1,13 +1,728 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angor</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <title>Angor</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href="./css/vendors/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css" />
+  <link href="./style.css" rel="stylesheet" />
 </head>
-<body>
-    <h1 class="welcome-text">Welcome to Angor!</h1>
-    <script src="script.js"></script>
+
+<body class="font-inter antialiased bg-slate-900 text-slate-200 tracking-tight">
+  <!-- Page wrapper -->
+  <div class="flex flex-col min-h-screen overflow-hidden">
+    <!-- Site header -->
+    <header class="absolute w-full z-30">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between h-16 md:h-20">
+          <!-- Site branding -->
+          <div class="shrink-0 mr-4">
+            <!-- Logo -->
+            <a class="block" href="/" aria-label="Angor">
+              <img src="/images/icon-angor.svg" width="50" height="50" alt="logo" />
+            </a>
+          </div>
+
+          <!-- Desktop navigation -->
+          <nav class="flex grow">
+            <!-- Desktop sign in links -->
+            <ul class="flex grow justify-end flex-wrap items-center">
+              <li class="ml-3">
+                <a class="btn-sm text-white bg-indigo-500 hover:bg-indigo-600 w-full shadow-sm group"
+                  href="https://app.angor.io">
+                  Angor App
+                  <span
+                    class="tracking-normal text-sky-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page content -->
+    <main class="grow">
+      <!-- Hero -->
+      <section class="relative">
+        <!-- Illustration -->
+        <div class="hidden md:block absolute left-1/2 -translate-x-1/2 pointer-events-none -z-10" aria-hidden="true">
+          <img src="./images/hero-illustration.svg" class="max-w-none" width="1440" height="1265"
+            alt="Hero Illustration" />
+        </div>
+
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="pt-32 md:pt-40">
+            <!-- Hero content -->
+            <div class="max-w-3xl mx-auto text-center">
+              <h1 class="h1 font-hkgrotesk mb-6" data-aos="fade-up">
+                Welcome to Angor
+              </h1>
+              <p class="text-xl text-slate-500 mb-10" data-aos="fade-up" data-aos-delay="100">
+                Think of it as a trustless, risk-minimized open source funding
+                platform
+              </p>
+              <div
+                class="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4"
+                data-aos="fade-up" data-aos-delay="200">
+                <div>
+                  <a class="btn text-white bg-indigo-500 hover:bg-indigo-600 w-full shadow-sm group"
+                    href="https://browse.angor.io">
+                    Angor Browse
+                    <span
+                      class="tracking-normal text-sky-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                  </a>
+                </div>
+                <div>
+                  <a class="btn text-slate-300 bg-slate-700 hover:bg-slate-600 border-slate-600 w-full shadow-sm"
+                    href="https://test.angor.io">Angor Test</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero image -->
+            <div class="pt-16 md:pt-20" data-aos="fade-up" data-aos-delay="300">
+              <img class="mx-auto" src="./images/hero-image.png" width="920" height="518" alt="Hero" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="relative">
+        <!-- Bg illustration -->
+        <div class="absolute left-1/2 -translate-x-1/2 pointer-events-none -mt-20 -z-10" aria-hidden="true">
+          <img src="./images/features-illustration.svg" class="max-w-none" width="1440" height="440"
+            alt="Illustration" />
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="py-12 md:py-20">
+            <!-- Section header -->
+            <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+              <h2 class="h2 font-hkgrotesk mb-4">
+                Empowering Trustless Crowdfunding with Angor
+              </h2>
+              <div class="max-w-2xl mx-auto">
+                <p class="text-xl text-slate-500">
+                  Revolutionizing Decentralized Fundraising on the Bitcoin
+                  Network
+                </p>
+              </div>
+            </div>
+
+            <div class="carousel swiper-container">
+              <div class="swiper-wrapper">
+                <!-- Carousel items -->
+                <div class="swiper-slide h-auto flex flex-col bg-slate-800 p-6 rounded">
+                  <img class="mb-3" src="./images/features-icon-01.svg" width="56" height="56" alt="Icon 01" />
+                  <div class="grow">
+                    <div class="font-hkgrotesk font-bold text-xl">
+                      Secure Timelock Contracts
+                    </div>
+                    <div class="text-slate-500 mb-3">
+                      Angor ensures transparent and secure fund locking,
+                      putting control in the hands of investors.
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <a class="font-medium text-indigo-500 inline-flex items-center transition duration-150 ease-in-out group"
+                      href="#0">Learn More
+                      <span
+                        class="tracking-normal group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
+                  </div>
+                </div>
+
+                <div class="swiper-slide h-auto flex flex-col bg-slate-800 p-6 rounded">
+                  <img class="mb-3" src="./images/features-icon-03.svg" width="56" height="56" alt="Icon 03" />
+                  <div class="grow">
+                    <div class="font-hkgrotesk font-bold text-xl">
+                      Founder-Driven Stages
+                    </div>
+                    <div class="text-slate-500 mb-3">
+                      Founders manage staged fund releases precisely, using
+                      time-locked contracts for enhanced accountability.
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <a class="font-medium text-indigo-500 inline-flex items-center transition duration-150 ease-in-out group"
+                      href="#0">Learn More
+                      <span
+                        class="tracking-normal group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
+                  </div>
+                </div>
+
+                <div class="swiper-slide h-auto flex flex-col bg-slate-800 p-6 rounded">
+                  <img class="mb-3" src="./images/features-icon-04.svg" width="56" height="56" alt="Icon 04" />
+                  <div class="grow">
+                    <div class="font-hkgrotesk font-bold text-xl">
+                      Flexible Investor Recovery
+                    </div>
+                    <div class="text-slate-500 mb-3">
+                      Angor offers flexible recovery options, providing
+                      investor control and deterring fraudulent activities.
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <a class="font-medium text-indigo-500 inline-flex items-center transition duration-150 ease-in-out group"
+                      href="#0">Learn More
+                      <span
+                        class="tracking-normal group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Arrows -->
+            <div class="flex mt-12 space-x-4 justify-end">
+              <button
+                class="carousel-prev relative z-20 w-14 h-14 rounded-full flex items-center justify-center group border border-slate-700 bg-slate-800 hover:bg-slate-700 transition duration-150 ease-in-out">
+                <span class="sr-only">Previous</span>
+                <svg class="w-4 h-4 fill-slate-400 transition duration-150 ease-in-out" viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.7 14.7l1.4-1.4L3.8 9H16V7H3.8l4.3-4.3-1.4-1.4L0 8z" />
+                </svg>
+              </button>
+              <button
+                class="carousel-next relative z-20 w-14 h-14 rounded-full flex items-center justify-center group border border-slate-700 bg-slate-800 hover:bg-slate-700 transition duration-150 ease-in-out">
+                <span class="sr-only">Next</span>
+                <svg class="w-4 h-4 fill-slate-400 transition duration-150 ease-in-out" viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.3 14.7l-1.4-1.4L12.2 9H0V7h12.2L7.9 2.7l1.4-1.4L16 8z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features #2 -->
+      <section class="relative border-t border-slate-800">
+        <!-- Bg gradient: top -->
+        <div
+          class="absolute top-0 left-0 right-0 bg-gradient-to-b from-slate-800 to-transparent opacity-25 h-[25rem] pointer-events-none -z-10"
+          aria-hidden="true"></div>
+
+        <!-- Bottom vertical line -->
+        <div class="hidden md:block absolute w-0.5 h-8 bottom-0 bg-slate-800 left-1/2 -translate-x-1/2"
+          aria-hidden="true"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="py-12 md:py-20 border-t border-slate-800">
+            <!-- Section header -->
+            <div class="max-w-3xl mx-auto text-center pb-12">
+              <h2 class="h2 font-hkgrotesk">An ecosystem of integrations</h2>
+            </div>
+
+            <!-- Logo animation -->
+            <div class="relative flex flex-col items-center p-16">
+              <!-- Blurred dots -->
+              <svg class="absolute top-1/2 -translate-y-1/2" width="557" height="93" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox"
+                    id="hlogo-blurreddots-a">
+                    <feGaussianBlur stdDeviation="2" in="SourceGraphic" />
+                  </filter>
+                  <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox"
+                    id="blurreddots-b">
+                    <feGaussianBlur stdDeviation="2" in="SourceGraphic" />
+                  </filter>
+                  <filter x="-150%" y="-150%" width="400%" height="400%" filterUnits="objectBoundingBox"
+                    id="blurreddots-c">
+                    <feGaussianBlur stdDeviation="6" in="SourceGraphic" />
+                  </filter>
+                  <filter x="-150%" y="-150%" width="400%" height="400%" filterUnits="objectBoundingBox"
+                    id="blurreddots-d">
+                    <feGaussianBlur stdDeviation="4" in="SourceGraphic" />
+                  </filter>
+                  <filter x="-150%" y="-150%" width="400%" height="400%" filterUnits="objectBoundingBox"
+                    id="blurreddots-e">
+                    <feGaussianBlur stdDeviation="4" in="SourceGraphic" />
+                  </filter>
+                  <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox"
+                    id="blurreddots-f">
+                    <feGaussianBlur stdDeviation="2" in="SourceGraphic" />
+                  </filter>
+                  <filter x="-100%" y="-100%" width="300%" height="300%" filterUnits="objectBoundingBox"
+                    id="blurreddots-g">
+                    <feGaussianBlur stdDeviation="4" in="SourceGraphic" />
+                  </filter>
+                  <filter x="-150%" y="-150%" width="400%" height="400%" filterUnits="objectBoundingBox"
+                    id="blurreddots-h">
+                    <feGaussianBlur stdDeviation="6" in="SourceGraphic" />
+                  </filter>
+                  <filter x="-150%" y="-150%" width="400%" height="400%" filterUnits="objectBoundingBox"
+                    id="blurreddots-i">
+                    <feGaussianBlur stdDeviation="4" in="SourceGraphic" />
+                  </filter>
+                  <filter x="-75%" y="-75%" width="250%" height="250%" filterUnits="objectBoundingBox"
+                    id="blurreddots-j">
+                    <feGaussianBlur stdDeviation="2" in="SourceGraphic" />
+                  </filter>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                  <g class="fill-indigo-600" transform="translate(437 8)">
+                    <circle fill-opacity=".64" filter="url(#blurreddots-a)" cx="6" cy="66" r="6" />
+                    <circle fill-opacity=".32" filter="url(#blurreddots-b)" cx="90" cy="6" r="6" />
+                    <circle fill-opacity=".64" filter="url(#blurreddots-c)" cx="90" cy="66" r="6" />
+                    <circle fill-opacity=".32" filter="url(#blurreddots-d)" cx="6" cy="36" r="4" />
+                    <circle fill-opacity=".32" filter="url(#blurreddots-e)" cx="60" cy="36" r="4" />
+                    <circle fill-opacity=".64" cx="34" cy="22" r="2" />
+                    <circle fill-opacity=".32" cx="34" cy="50" r="2" />
+                    <circle fill-opacity=".64" cx="118" cy="22" r="2" />
+                    <circle fill-opacity=".32" cx="118" cy="50" r="2" />
+                  </g>
+                  <g class="fill-indigo-600" transform="matrix(-1 0 0 1 120 8)">
+                    <circle fill-opacity=".64" filter="url(#blurreddots-f)" cx="6" cy="66" r="6" />
+                    <circle fill-opacity=".32" filter="url(#blurreddots-g)" cx="90" cy="6" r="6" />
+                    <circle fill-opacity=".64" filter="url(#blurreddots-h)" cx="90" cy="66" r="6" />
+                    <circle fill-opacity=".32" filter="url(#blurreddots-i)" cx="6" cy="36" r="4" />
+                    <circle fill-opacity=".64" filter="url(#blurreddots-j)" cx="60" cy="36" r="4" />
+                    <circle fill-opacity=".32" cx="34" cy="22" r="2" />
+                    <circle fill-opacity=".32" cx="34" cy="50" r="2" />
+                    <circle fill-opacity=".64" cx="118" cy="22" r="2" />
+                    <circle fill-opacity=".32" cx="118" cy="50" r="2" />
+                  </g>
+                </g>
+              </svg>
+              <div class="relative w-32 h-32 flex justify-center items-center">
+                <!-- Halo effect -->
+                <svg
+                  class="absolute inset-0 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none h-auto max-w-[200%]"
+                  width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="lg-1">
+                      <stop stop-color="#0F172A" stop-opacity="0%" offset="0%"></stop>
+                      <stop stop-color="#0F172A" offset="100%"></stop>
+                    </linearGradient>
+                  </defs>
+                  <g class="fill-indigo-600 opacity-75" fill-rule="evenodd">
+                    <circle class="pulse" cx="400" cy="400" r="200" />
+                    <circle class="pulse pulse-1" cx="400" cy="400" r="200" />
+                    <circle class="pulse pulse-2" cx="400" cy="400" r="200" />
+                    <circle class="pulse pulse-3" cx="400" cy="400" r="200" />
+                    <rect fill="url(#lg-1)" width="800" height="800" />
+                  </g>
+                </svg>
+                <!-- Logo -->
+                <img src="/images/icon-angor.svg" width="100" height="100" alt="logo" />
+              </div>
+            </div>
+
+            <!-- Integration boxes -->
+            <div
+              class="relative max-w-xs sm:max-w-md mx-auto md:max-w-6xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 mt-10 md:mt-20">
+              <!-- Top vertical line -->
+              <div class="hidden md:block absolute w-0.5 h-8 -top-16 -mt-2 bg-slate-800 left-1/2 -translate-x-1/2"
+                aria-hidden="true"></div>
+              <div class="relative flex justify-center items-center bg-slate-800 aspect-square p-2" data-aos="fade-up">
+                <!-- Inner lines -->
+                <div class="hidden md:block absolute inset-0 w-[calc(100%+24px)] h-6 -top-10 left-1/2 -translate-x-1/2"
+                  aria-hidden="true">
+                  <div class="absolute w-0.5 h-full bg-slate-800 left-1/2 -translate-x-1/2"></div>
+                  <div class="absolute w-1/2 h-0.5 bg-slate-800 right-0"></div>
+                </div>
+                <!-- Circle -->
+                <div
+                  class="bg-gradient-to-t from-slate-800 to-slate-900 w-20 h-20 rounded-full flex justify-center items-center">
+                  <!-- Icon -->
+                  <img src="./images/coins/Group-0.svg" width="46" height="46" alt="Icon 01" />
+                </div>
+              </div>
+              <div class="relative flex justify-center items-center bg-slate-800 aspect-square p-2" data-aos="fade-up"
+                data-aos-delay="100">
+                <!-- Inner lines -->
+                <div class="hidden md:block absolute inset-0 w-[calc(100%+24px)] h-6 -top-10 left-1/2 -translate-x-1/2"
+                  aria-hidden="true">
+                  <div class="absolute w-0.5 h-full bg-slate-800 left-1/2 -translate-x-1/2"></div>
+                  <div class="absolute w-full h-0.5 bg-slate-800"></div>
+                </div>
+                <!-- Circle -->
+                <div
+                  class="bg-gradient-to-t from-slate-800 to-slate-900 w-20 h-20 rounded-full flex justify-center items-center">
+                  <!-- Icon -->
+                  <img src="./images/coins/Group-1.svg" width="46" height="46" alt="Icon 02" />
+                </div>
+              </div>
+              <div class="relative flex justify-center items-center bg-slate-800 aspect-square p-2" data-aos="fade-up"
+                data-aos-delay="200">
+                <!-- Inner lines -->
+                <div class="hidden md:block absolute inset-0 w-[calc(100%+24px)] h-6 -top-10 left-1/2 -translate-x-1/2"
+                  aria-hidden="true">
+                  <div class="absolute w-0.5 h-full bg-slate-800 left-1/2 -translate-x-1/2"></div>
+                  <div class="absolute w-full h-0.5 bg-slate-800"></div>
+                </div>
+                <!-- Circle -->
+                <div
+                  class="bg-gradient-to-t from-slate-800 to-slate-900 w-20 h-20 rounded-full flex justify-center items-center">
+                  <!-- Icon -->
+                  <img src="./images/coins/Group-2.svg" width="53" height="45" alt="Icon 03" />
+                </div>
+              </div>
+              <div class="relative flex justify-center items-center bg-slate-800 aspect-square p-2" data-aos="fade-up"
+                data-aos-delay="300">
+                <!-- Inner lines -->
+                <div class="hidden md:block absolute inset-0 w-[calc(100%+24px)] h-6 -top-10 left-1/2 -translate-x-1/2"
+                  aria-hidden="true">
+                  <div class="absolute w-0.5 h-full bg-slate-800 left-1/2 -translate-x-1/2"></div>
+                  <div class="absolute w-full h-0.5 bg-slate-800"></div>
+                </div>
+                <!-- Circle -->
+                <div
+                  class="bg-gradient-to-t from-slate-800 to-slate-900 w-20 h-20 rounded-full flex justify-center items-center">
+                  <!-- Icon -->
+                  <img src="./images/coins/Group-3.svg" width="48" height="46" alt="Icon 04" />
+                </div>
+              </div>
+              <div class="relative flex justify-center items-center bg-slate-800 aspect-square p-2" data-aos="fade-up"
+                data-aos-delay="400">
+                <!-- Inner lines -->
+                <div class="hidden md:block absolute inset-0 w-[calc(100%+24px)] h-6 -top-10 left-1/2 -translate-x-1/2"
+                  aria-hidden="true">
+                  <div class="absolute w-0.5 h-full bg-slate-800 left-1/2 -translate-x-1/2"></div>
+                  <div class="absolute w-full h-0.5 bg-slate-800"></div>
+                </div>
+                <!-- Circle -->
+                <div
+                  class="bg-gradient-to-t from-slate-800 to-slate-900 w-20 h-20 rounded-full flex justify-center items-center">
+                  <!-- Icon -->
+                  <img src="./images/coins/Group-4.svg" width="49" height="48" alt="Icon 05" />
+                </div>
+              </div>
+              <div class="relative flex justify-center items-center bg-slate-800 aspect-square p-2" data-aos="fade-up"
+                data-aos-delay="500">
+                <!-- Inner lines -->
+                <div class="hidden md:block absolute inset-0 w-[calc(100%+24px)] h-6 -top-10 left-1/2 -translate-x-1/2"
+                  aria-hidden="true">
+                  <div class="absolute w-0.5 h-full bg-slate-800 left-1/2 -translate-x-1/2"></div>
+                  <div class="absolute w-1/2 h-0.5 bg-slate-800 left-0"></div>
+                </div>
+                <!-- Circle -->
+                <div
+                  class="bg-gradient-to-t from-slate-800 to-slate-900 w-20 h-20 rounded-full flex justify-center items-center">
+                  <!-- Icon -->
+                  <img src="./images/coins/Group-5.svg" width="48" height="44" alt="Icon 06" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs -->
+      <section>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="py-12 md:py-20">
+            <!-- Section header -->
+            <div class="pb-12 md:pb-20">
+              <h2 class="h2 font-hkgrotesk">FAQs</h2>
+            </div>
+
+            <!-- Columns -->
+            <div class="md:flex md:space-x-12 space-y-8 md:space-y-0">
+              <!-- Column -->
+              <div class="w-full md:w-1/2 space-y-8">
+                <!-- Item -->
+                <div class="space-y-2">
+                  <h4 class="text-xl font-hkgrotesk font-medium">
+                    What is Angor and how does it differ from traditional
+                    crowdfunding platforms?
+                  </h4>
+                  <p class="text-slate-500">
+                    Angor is a decentralized crowdfunding platform built on
+                    the Bitcoin network. Unlike traditional platforms, it
+                    employs trustless mechanisms, such as secure timelock
+                    contracts and controlled stage releases, ensuring
+                    transparency and mitigating risks for investors.
+                  </p>
+                </div>
+
+                <!-- Item -->
+                <div class="space-y-2">
+                  <h4 class="text-xl font-hkgrotesk font-medium">
+                    How do investors maintain control over their funds on
+                    Angor?
+                  </h4>
+                  <p class="text-slate-500">
+                    Investors lock their funds into time-locked contracts at
+                    various stages. This unique feature allows investors to
+                    actively control their contributions, with the flexibility
+                    to recover funds or accept penalties as needed.
+                  </p>
+                </div>
+
+                <!-- Item -->
+                <div class="space-y-2">
+                  <h4 class="text-xl font-hkgrotesk font-medium">
+                    What sets Angor apart in terms of security and fraud
+                    prevention?
+                  </h4>
+                  <p class="text-slate-500">
+                    Angor introduces penalties for early investors (seeders)
+                    during recovery, adding an extra layer of security. This,
+                    coupled with founder-controlled releases and transparent
+                    mechanisms, significantly mitigates the risk of fraud.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Column -->
+              <div class="w-full md:w-1/2 space-y-8">
+                <!-- Item -->
+                <div class="space-y-2">
+                  <h4 class="text-xl font-hkgrotesk font-medium">
+                    Can project founders misuse the funds on Angor?
+                  </h4>
+                  <p class="text-slate-500">
+                    No, Angor incorporates founder-controlled stage releases,
+                    utilizing time-locked contracts and founder keys. This
+                    structured approach ensures that funds are released at
+                    predefined intervals, reducing the risk of mismanagement.
+                  </p>
+                </div>
+
+                <!-- Item -->
+                <div class="space-y-2">
+                  <h4 class="text-xl font-hkgrotesk font-medium">
+                    How does Angor contribute to the Bitcoin network's growth?
+                  </h4>
+                  <p class="text-slate-500">
+                    Angor encourages Bitcoin holders to allocate funds for
+                    investment, unlocking resources that contribute to the
+                    Bitcoin network. This aligns with our vision of making
+                    investments work for users while strengthening the broader
+                    Bitcoin ecosystem.
+                  </p>
+                </div>
+
+                <!-- Item -->
+                <div class="space-y-2">
+                  <h4 class="text-xl font-hkgrotesk font-medium">
+                    Are there any limitations on distributing or sublicensing
+                    Angor?
+                  </h4>
+                  <p class="text-slate-500">
+                    Yes, Angor cannot be distributed or sublicensed without
+                    explicit permission from Softchains, the project behind
+                    Angor. This measure is in place to maintain the integrity
+                    of the platform and protect the interests of all
+                    stakeholders.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="relative border-t border-slate-800">
+        <!-- Bg gradient: top -->
+        <div
+          class="absolute top-0 left-0 right-0 bg-gradient-to-b from-slate-800 to-transparent opacity-25 h-[25rem] pointer-events-none -z-10"
+          aria-hidden="true"></div>
+
+        <!-- Illustration -->
+        <div class="hidden lg:block absolute top-0 left-1/2 -translate-x-1/2 -mt-8 pointer-events-none -z-10"
+          aria-hidden="true">
+          <img src="./images/cta-illustration.svg" class="max-w-none" width="1440" height="440"
+            alt="Features 01 Illustration" />
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="py-12 md:py-20">
+            <!-- Section header -->
+            <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20" data-aos="fade-up">
+              <h2 class="h2 font-hkgrotesk">
+                trustless, risk-minimized open source funding platform.
+              </h2>
+            </div>
+
+            <!-- Buttons -->
+            <div class="text-center">
+              <div
+                class="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <div data-aos="fade-up" data-aos-delay="100">
+                  <a class="btn text-white bg-indigo-500 hover:bg-indigo-600 w-full shadow-sm group"
+                    href="https://app.angor.io">
+                    Angor App
+                    <span
+                      class="tracking-normal text-sky-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                  </a>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                  <a class="btn text-slate-300 bg-slate-700 hover:bg-slate-600 border-slate-600 w-full shadow-sm"
+                    href="https://test.angor.io">Angor Test</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Site footer -->
+    <footer>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <!-- Blocks -->
+        <div class="grid sm:grid-cols-12 lg:grid-cols-10 gap-8 py-8 md:py-12 border-t border-slate-800">
+          <!-- 1st block -->
+          <div class="sm:col-span-12 lg:col-span-2 lg:max-w-xs">
+            <div class="mb-2">
+              <!-- Logo -->
+              <a class="inline-flex" href="/" aria-label="Angor">
+                <img src="/images/icon-angor.svg" width="50" height="50" alt="logo" />
+              </a>
+            </div>
+          </div>
+
+          <!-- 2nd block -->
+          <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+            <h6 class="text-xs text-slate-200 font-semibold uppercase underline mb-3">
+              Products
+            </h6>
+            <ul class="text-sm space-y-2">
+              <li>
+                <a class="text-slate-500 hover:text-slate-300 transition duration-150 ease-in-out"
+                  href="https://app.angor.io">Angor app</a>
+              </li>
+              <li>
+                <a class="text-slate-500 hover:text-slate-300 transition duration-150 ease-in-out"
+                  href="https://test.angor.io">Angor test</a>
+              </li>
+              <li>
+                <a class="text-slate-500 hover:text-slate-300 transition duration-150 ease-in-out"
+                  href="https://browse.angor.io">Angor browse</a>
+              </li>
+              <li>
+                <a class="text-slate-500 hover:text-slate-300 transition duration-150 ease-in-out"
+                  href="https://explorer.angor.io">Angor explorer</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 3rd block -->
+          <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+            <h6 class="text-xs text-slate-200 font-semibold uppercase underline mb-3">
+              Resources
+            </h6>
+            <ul class="text-sm space-y-2">
+              <li>
+                <a class="text-slate-500 hover:text-slate-300 transition duration-150 ease-in-out" href="#0">Blog</a>
+              </li>
+              <li>
+                <a class="text-slate-500 hover:text-slate-300 transition duration-150 ease-in-out" href="#0">Cheat
+                  Sheet</a>
+              </li>
+              <li>
+                <a class="text-slate-500 hover:text-slate-300 transition duration-150 ease-in-out" href="#0">Channel
+                  Partners</a>
+              </li>
+              <li>
+                <a class="text-slate-500 hover:text-slate-300 transition duration-150 ease-in-out" href="#0">Affiliate
+                  Program</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 4th block -->
+          <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+            <h6 class="text-xs text-slate-200 font-semibold uppercase underline mb-3">
+              Projects
+            </h6>
+            <ul class="text-sm space-y-2">
+              <li>
+                <a class="text-slate-500 hover:text-slate-300 transition duration-150 ease-in-out" href="#0">Session
+                  Recording</a>
+              </li>
+              <li>
+                <a class="text-slate-500 hover:text-slate-300 transition duration-150 ease-in-out" href="#0">Feature
+                  Flags</a>
+              </li>
+              <li>
+                <a class="text-slate-500 hover:text-slate-300 transition duration-150 ease-in-out"
+                  href="#0">Heatmaps</a>
+              </li>
+              <li>
+                <a class="text-slate-500 hover:text-slate-300 transition duration-150 ease-in-out" href="#0">Correlation
+                  Analysis</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 5th block -->
+          <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+            <h6 class="text-xs text-slate-200 font-semibold uppercase underline mb-3">
+              Company
+            </h6>
+            <ul class="text-sm space-y-2">
+              <li>
+                <a class="text-slate-500 hover:text-slate-300 transition duration-150 ease-in-out" href="#0">About
+                  Us</a>
+              </li>
+              <li>
+                <a class="text-slate-500 hover:text-slate-300 transition duration-150 ease-in-out" href="#0">Our
+                  Story</a>
+              </li>
+              <li>
+                <a class="text-slate-500 hover:text-slate-300 transition duration-150 ease-in-out" href="#0">Work With
+                  Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom area -->
+        <div class="md:flex md:items-center md:justify-between pb-4 md:pb-8">
+          <!-- Social links -->
+          <ul class="flex mb-4 md:order-1 md:ml-4 md:mb-0">
+            <li>
+              <a class="flex justify-center items-center text-indigo-500 hover:text-slate-300 transition duration-150 ease-in-out"
+                href="#0" aria-label="Twitter">
+                <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M24 11.5c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4 0 1.6 1.1 2.9 2.6 3.2-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H8c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4c.7-.5 1.3-1.1 1.7-1.8z" />
+                </svg>
+              </a>
+            </li>
+            <li class="ml-2">
+              <a class="flex justify-center items-center text-indigo-500 hover:text-slate-300 transition duration-150 ease-in-out"
+                href="#0" aria-label="Medium">
+                <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M23 8H9a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1Zm-1.708 3.791-.858.823a.251.251 0 0 0-.1.241V18.9a.251.251 0 0 0 .1.241l.838.823v.181h-4.215v-.181l.868-.843c.085-.085.085-.11.085-.241v-4.887l-2.41 6.131h-.329l-2.81-6.13V18.1a.567.567 0 0 0 .156.472l1.129 1.37v.181h-3.2v-.181l1.129-1.37a.547.547 0 0 0 .146-.472v-4.749a.416.416 0 0 0-.138-.351l-1-1.209v-.181H13.8l2.4 5.283 2.122-5.283h2.971l-.001.181Z" />
+                </svg>
+              </a>
+            </li>
+            <li class="ml-2">
+              <a class="flex justify-center items-center text-indigo-500 hover:text-slate-300 transition duration-150 ease-in-out"
+                href="#0" aria-label="Github">
+                <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Links -->
+          <div class="text-sm text-slate-600">
+            <a class="text-slate-500 hover:text-slate-300 transition duration-150 ease-in-out" href="#0">Terms</a>
+            ·
+            <a class="text-slate-500 hover:text-slate-300 transition duration-150 ease-in-out" href="#0">Privacy
+              Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./js/vendors/alpinejs.min.js" defer></script>
+  <script src="./js/vendors/aos.js"></script>
+  <script src="./js/vendors/swiper-bundle.min.js"></script>
+  <script src="./js/main.js"></script>
 </body>
+
 </html>
