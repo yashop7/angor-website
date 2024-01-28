@@ -17,9 +17,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     
     env:
-      PROJECT_NAME: "Angor-Browse"
-      SOLUTION_PATH: "src/Angor.Browse.sln"
-      PROJECT_PATH: "src/Angor.Browse/Angor.Browse.csproj"
+      PROJECT_NAME: "Angor-Website"
+      SOLUTION_PATH: "src/Angor.Website.sln"
+      PROJECT_PATH: "src/Angor.Website/Angor.Website.csproj"
       BUILD_CONFIGURATION: "Release"
 
     steps:
