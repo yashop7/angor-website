@@ -103,3 +103,6 @@
 .bg-main {
     background-image: url('../images/banner.png');
 }
+.ml-2 {
+    margin-left: 2rem;
+}
