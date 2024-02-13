@@ -106,3 +106,14 @@
 .ml-2 {
     margin-left: 2rem;
 }
+
+.direction-ltr {
+    display: flex;
+    margin-top: 15px;
+}
+
+.direction-rtl {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 15px;
+}
