@@ -139,3 +139,4 @@ window.onscroll = function () {
 window.myInterop.toggleTheme(true);
 window.myInterop.toggleDirection(true);
 window.myInterop.setCurrentYear();
+

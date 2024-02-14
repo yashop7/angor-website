@@ -65,6 +65,19 @@
     <script src="_content/BlazorAnimate/blazorAnimateInterop.js"></script>
     <!-- Custom Js -->
     <script src="/assets/js/custom.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(function (registration) {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    })
+                    .catch(function (error) {
+                        console.log('ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
+    </script>
 </body>
 
 </html>
