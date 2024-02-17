@@ -25,8 +25,7 @@
     <meta name="twitter:title" content="Angor: Decentralized Crowdfunding Platform">
     <meta name="twitter:description" content="Explore the trustless and risk-minimized ICO platform on Bitcoin and Nostr. Lock funds securely with special timelock contracts. Contribute to the codebase.">
     <meta name="twitter:image" content="https://angor.io/icon-512.png">
-
-    <!-- Favicon -->
+     <!-- Favicon -->
     <link rel="icon" type="icon" href="/assets/images/favicon.png" />
 
     <!-- Fonts -->
@@ -44,7 +43,7 @@
     <link href="/manifest.webmanifest" rel="manifest" />
     <link rel="apple-touch-icon" sizes="512x512" href="/icon-512.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png" />
-
+ 
 </head>
 
 <body class="overflow-x-hidden dark">
@@ -63,21 +62,12 @@
     <script src="/assets/js/vanilla-counter.js"></script>
     <!-- AOS Animation JS -->
     <script src="_content/BlazorAnimate/blazorAnimateInterop.js"></script>
+
+    <script src="/ServiceWorkerRegister.js"></script>
     <!-- Custom Js -->
+    <script src="/assets/js/appUpdate.js"></script>
     <script src="/assets/js/custom.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(function (registration) {
-                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                    })
-                    .catch(function (error) {
-                        console.log('ServiceWorker registration failed: ', error);
-                    });
-            });
-        }
-    </script>
+ 
 </body>
 
 </html>
