@@ -17,7 +17,7 @@ function notifyAppUpdateToUser() {
     setTimeout(function () {
         if (angorWebsite.mainBodyInstance) {
             angorWebsite.mainBodyInstance.invokeMethodAsync('ShowUpdateVersion').then(function () { }, function (er) {
-                //setTimeout(notifyAppUpdateToUser, 2000);
+                setTimeout(notifyAppUpdateToUser, 5000);
             });
         }
     }, 2000);
