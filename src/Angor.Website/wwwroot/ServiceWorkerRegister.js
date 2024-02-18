@@ -44,7 +44,6 @@ window['updateAvailable']
 function showAddToHomeScreen() {
     setTimeout(function () {
         const installButton = document.getElementById('installButton');
-        console.log(installButton);
         if (installButton) {
             installButton.classList.remove('hidden');
         }

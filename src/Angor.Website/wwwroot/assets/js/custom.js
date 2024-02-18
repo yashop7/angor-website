@@ -67,13 +67,9 @@ window.myInterop = {
         menus.classList.toggle('open-menus');
         overlay.classList.toggle('hidden');
     },
-
-
     installApp: function () {
         window.BlazorPWA.installPWA();
     },
-
-
     setOnScroll: function () {
         let scrollpos = window.scrollY;
         if (scrollpos > 0) {
