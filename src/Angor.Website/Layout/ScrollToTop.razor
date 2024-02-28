@@ -24,7 +24,7 @@
         }
         catch (Exception ex)
         {
-            Console.Error.WriteLine($"Error calling scrollToTop: {ex.Message}");
+            await Console.Error.WriteLineAsync($"Error calling scrollToTop: {ex.Message}");
         }
     }
 }
