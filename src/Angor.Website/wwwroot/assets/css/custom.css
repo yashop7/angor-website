@@ -106,7 +106,9 @@
 .ml-2 {
     margin-left: 2rem;
 }
-
+.mr-2 {
+    margin-right: 2rem;
+}
 .direction-ltr {
     display: flex;
     margin-top: 15px;
