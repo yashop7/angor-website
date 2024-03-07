@@ -135,7 +135,7 @@
 
     /* Creative Agency Page CSS */
     .text-color {
-        @apply bg-[url(../images/color.png)] bg-clip-text bg-top bg-no-repeat text-transparent;
+        @apply bg-[url(../images/creative/color.png)] bg-clip-text bg-top bg-no-repeat text-transparent;
     }
 }
 
