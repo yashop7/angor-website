@@ -103,12 +103,15 @@
 .bg-main {
     background-image: url('../images/banner.png');
 }
+
 .ml-2 {
     margin-left: 2rem;
 }
+
 .mr-2 {
     margin-right: 2rem;
 }
+
 .direction-ltr {
     display: flex;
     margin-top: 15px;
@@ -124,4 +127,8 @@
     font-family: "Rubik Moonrocks", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+.main-header-text {
+    line-height: 1.4 !important;
 }

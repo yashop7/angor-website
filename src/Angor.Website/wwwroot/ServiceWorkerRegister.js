@@ -47,7 +47,7 @@ function showAddToHomeScreen() {
         if (installButton) {
             installButton.classList.remove('hidden');
         }
-    }, 3000);  
+    }, 3000);
 }
 
 window.BlazorPWA = {
@@ -58,6 +58,10 @@ window.BlazorPWA = {
                 .then(function (choiceResult) {
                     window.PWADeferredPrompt = null;
                 });
+            const installButton = document.getElementById('installButton');
+            if (installButton) {
+                installButton.classList.add('hidden');
+            }
         }
     }
 };
