@@ -1,0 +1,80 @@
+---
+import "@fontsource/inter";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/inter/800.css";
+import "@fontsource/inter/900.css";
+import 'overlayscrollbars/overlayscrollbars.css';
+import { 
+  OverlayScrollbars, 
+  // ScrollbarsHidingPlugin, 
+  // SizeObserverPlugin, 
+  // ClickScrollPlugin 
+} from 'overlayscrollbars';
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="bg-bgDark2" data-overlayscrollbars-initialize>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="A decentralized crowdfunding platform built on Bitcoin and Nostr"
+    />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-bgDark2" data-overlayscrollbars-initialize>
+    <main aria-label="Main content">
+      <slot />
+    </main>
+    <style is:global>
+      html {
+        font-family: Inter;
+        background-color: #26272b;
+        overflow-x: hidden;
+        scroll-behavior: smooth !important;
+      }
+    </style>
+  </body>
+</html>
+
+<script>
+import { OverlayScrollbars } from "overlayscrollbars";
+
+ 
+document.addEventListener("DOMContentLoaded", () => {
+   const bodyElement = document.querySelector('body');
+
+  OverlayScrollbars(
+
+		{
+			target: bodyElement,
+			cancel: {
+				nativeScrollbarsOverlaid: true,    // don't initialize the overlay scrollbar if there is a native one
+			}
+		}, {
+		scrollbars: {
+ 			autoHide: 'move',
+			autoHideDelay: 500,
+			autoHideSuspend: false,
+		},
+	});
+});
+
+
+</script>
