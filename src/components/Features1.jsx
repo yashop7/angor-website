@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import bitcoin from "../assets/images/bitcoin.svg";
 import nostr from "../assets/images/nostr.svg";
 import angor from "../assets/images/angor.svg";
-import blockcore from "../assets/images/blockcore.svg";
+import hub from "../assets/images/hub.svg";
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 
 export const Features1 = () => {
@@ -74,7 +74,7 @@ export const Features1 = () => {
               </div>
               <div className="py-3 pl-3 pr-2 rounded-lg ">
                 <img
-                  src={blockcore.src}
+                  src={hub.src}
                   alt="Feature image 4"
                   className="rounded-xl  main-border-gray"
                   aria-label="Feature image 4"
