@@ -18,14 +18,14 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.05 }}
         >
-          <div className="rubik-moonrocks-regular text-5xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-primaryText  px-8 sm:px-8 md:px-20 lg:px-4 sm:mt-32 mt-16">
-            <h1 className="inline md:hidden">Noncustodial crowdfunding</h1>
-            <h1 className="hidden md:inline">Noncustodial crowdfunding</h1>
+          <div className="rubik-moonrocks-regular text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-bold tracking-wide text-primaryText px-8 sm:px-8 md:px-20 lg:px-4 sm:mt-32 mt-16">
+            <h1>non custodial crowdfunding</h1>
           </div>
-          <h1 className="rubik-moonrocks-regular mt-2 sm:mt-2 text-4xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-secondaryColor  px-8 sm:px-20 md:px-24 lg:px-24">
+          <h1 className="rubik-moonrocks-regular mt-2 sm:mt-2 text-3xl sm:text-5xl lg:text-6xl xl:text-6xl font-bold tracking-wide text-secondaryColor px-8 sm:px-20 md:px-24 lg:px-24">
             with Angor
           </h1>
         </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -48,37 +48,37 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-<div className="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
-  <a
-    href="https://hub.angor.io"
-    className="w-64 sm:w-52 h-12 rounded-xl mr-0 sm:mr-4 font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
-    aria-label="Mainnet"
-  >
-    Angor Hub
-  </a>
-  <div className="relative group">
-  <a
-    href="#"
-    className="w-64 sm:w-52 h-12 rounded-xl mr-0 sm:mr-4 font-bold text-primaryText border border-solid flex justify-center items-center cursor-not-allowed bg-bgDark2 border-primaryColor opacity-50"
-    aria-label="Testnet"
-    disabled
-  >
-    Mainnet
-  </a>
-  <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition bg-gray-800 text-white text-sm py-1 px-2 rounded-lg">
-    Coming Soon
-  </div>
-</div>
+          <div className="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
+            <a
+              href="https://hub.angor.io"
+              className="w-64 sm:w-52 h-12 rounded-xl mr-0 sm:mr-4 font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
+              aria-label="Mainnet"
+            >
+              Angor Hub
+            </a>
 
-  <a
-    href="https://test.angor.io"
-    className="w-64 sm:w-52 h-12 rounded-xl font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
-    aria-label="Hub"
-  >
-    Testnet
-  </a>
-</div>
+            <a
+              href="https://test.angor.io"
+              className="w-64 sm:w-52 h-12 rounded-xl mr-0 sm:mr-4 font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
+              aria-label="Hub"
+            >
+              Testnet
+            </a>
 
+            <div className="relative group">
+              <a
+                href="#"
+                className="w-64 sm:w-52 h-12 rounded-xl font-bold text-primaryText border border-solid flex justify-center items-center cursor-not-allowed bg-bgDark2 border-primaryColor opacity-50"
+                aria-label="Testnet"
+                disabled
+              >
+                Mainnet
+              </a>
+              <div className="absolute top-full mt-2 left-0 w-64 sm:w-52 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out transform scale-95 group-hover:scale-100 bg-gray-800 text-white text-sm py-1 px-2 rounded-lg">
+                Coming Soon
+              </div>
+            </div>
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 10, zIndex: 20 }}

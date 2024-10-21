@@ -8,21 +8,21 @@ import testimonial3 from "../assets/images/testimonial3.png";
 const testimonialsData = [
   {
     customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
+    customerTitle: "Founder of Microsoft",
     content:
       "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Angor has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
     image: testimonial1,
   },
   {
     customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
+    customerTitle: "Founder of Tesla",
     content:
       "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Angor has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
     image: testimonial2,
   },
   {
     customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
+    customerTitle: "Founder of Apple",
     content:
       "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Angor has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
     image: testimonial3,

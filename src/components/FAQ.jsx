@@ -5,54 +5,51 @@ const FAQData = [
   {
     question: "What is Angor?",
     answer:
-      "Angor is a decentralized crowdfunding platform built on Bitcoin, incorporating Nostr for enhanced security and transparency. It allows investors to maintain control over their funds and supports direct communication between investors and founders.",
+      "Angor is fully decentralized, with no middleman involved in the investment process. It has no backend and uses the Bitcoin and Nostr protocols to achieve this.",
   },
   {
-    question: "How does the time-lock contract work?",
+    question: "How does Angor work?",
     answer:
-      "Time-lock contracts release funds in stages, based on project milestones. Investors can also recover unspent funds, providing flexibility and control over their investments.",
+      "Angor leverages Bitcoin’s scripting language to program spending conditions like timelocks, hashlocks, and multisig. Each project milestone is represented as a UTXO, releasing funds over time using timelocks, while a 2-of-2 multisig allows investors to exit if needed.",
   },
   {
-    question: "What role does Nostr play in Angor?",
+    question: "What role does Nostr play?",
     answer:
-      "Nostr is used for storing project metadata securely and facilitating direct, uncensored communication between founders and investors.",
+      "Nostr is used for storing project metadata and facilitating communication between founders and investors. Angor Hub allows you to create custom project views, search for projects, and get updates from founders.",
   },
   {
     question: "How does Angor benefit investors?",
     answer:
-      "Investors benefit from enhanced control over their funds, reduced investment risk, and direct communication with project founders.",
+      "Investor funds are time-locked, preventing rug pulls, and offering more control over unspent funds, which reduces financial risk.",
   },
   {
     question: "What advantages does Angor offer to founders?",
     answer:
-      "Founders enjoy streamlined fundraising in a trust-minimized environment and aligned investor support, which is vital for project success.",
+      "Founders benefit from a secure platform for investors, unlocking more capital. Investors are guaranteed that their funds are committed to the project, attracting serious backers.",
   },
   {
     question: "Is Angor suitable for all types of crowdfunding projects?",
     answer:
-      "Angor is designed primarily for Bitcoin and open-source projects, but its decentralized and secure nature makes it suitable for a wide range of crowdfunding initiatives.",
-  },
-  {
-    question: "How does Angor ensure the security of funds?",
-    answer:
-      "Security is achieved through Bitcoin's robust framework, time-lock contracts, and a 2-of-2 multisig approach for critical actions.",
-  },
-  {
-    question: "Can I participate in Angor without extensive knowledge of cryptocurrencies?",
-    answer:
-      "While basic knowledge of Bitcoin and cryptocurrencies is helpful, Angor is designed to be user-friendly and accessible to a broad audience.",
+      "Angor’s decentralized and secure nature makes it suitable for a wide range of crowdfunding projects.",
   },
   {
     question: "What assets can I invest?",
     answer:
-      "At this moment, Angor solely supports investment transactions conducted with Bitcoin.",
+      "Angor only supports Bitcoin for investments.",
   },
   {
-    question: "Is the investment process anonymous?",
+    question: "Do I need permission to use Angor?",
     answer:
-      "The anonymity of the investment process is as robust as the Bitcoin network itself, offering a level of privacy consistent with Bitcoin transactions.",
+      "Angor is permissionless and censorship-resistant, just like Bitcoin.",
+  },
+  {
+    question: "How does Angor ensure the security of funds?",
+    answer:
+      "Angor uses Bitcoin’s time-lock contracts and a 2-of-2 multisig approach, ensuring the security of funds at each stage.",
   },
 ];
+
+
 
 export const FAQ = () => (
   <section className="relative -mt-8 sm:mt-0 pt-12 sm:pt-16 pb-16 bg-blueGray-50 overflow-hidden">
