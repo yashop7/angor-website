@@ -1,6 +1,5 @@
-import { InstagramIcon } from "../assets/icons/InstagramIcon";
 import { AngorLogo } from "../assets/logos/AngorLogo";
-import { TwitterIcon } from "../assets/icons/TwitterIcon";
+import { NostrIcon } from "../assets/icons/NostrIcon";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 
 
@@ -33,19 +32,12 @@ export const Footer = () => {
                 </a>
                 <a
                   className="inline-block w-10  h-10 mr-2 p-2 pt-[0.55rem] pl-[0.55rem] outlined-button"
-                  href="https://twitter.com/blockcoredev"
-                  aria-label="Twitter"
+                  href="https://hub.angor.io/profile/3ab7c2108524b7d1c1c585f09c1b7e194f5e7f225a5bb947f378e074d74e9dbf"
+                  aria-label="Nostr"
                 >
-                  <TwitterIcon />
+                  <NostrIcon />
                 </a>
-                <a
-                  className="inline-block w-10  h-10 mr-2 p-2 pt-[0.55rem] pl-[0.55rem] outlined-button"
-                  href="https://instagram.com/angor.io"
-                  aria-label="Instagram"
-                >
-                  <InstagramIcon />
-                </a>
-              </div>
+                  </div>
             </div>
             <div className="w-full lg:w-2/3  lg:pl-16 hidden lg:flex flex-wrap justify-between">
               <div className="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
