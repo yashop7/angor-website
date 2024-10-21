@@ -50,18 +50,25 @@ export const Hero = () => {
         >
           <div className="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
             <a
-              href="https://beta.angor.io"
-              className="contained-button w-64 sm:w-52 h-12 mr-0 sm:mr-4 lg:mr-6 mb-2 sm:mb-0 hover:bg-bgDark3"
-              aria-label="Get started"
+              href="https://hub.angor.io"
+              className="w-64 sm:w-52 h-12 rounded-xl mr-0 sm:mr-4 font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
+              aria-label="Mainnet"
             >
-              Angor app
+             Angor Hub
+            </a>
+            <a
+              href="https://beta.angor.io"
+              className="w-64 sm:w-52 h-12 rounded-xl mr-0 sm:mr-4 font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
+              aria-label="Testnet"
+            >
+             Mainnet 
             </a>
             <a
               href="https://test.angor.io"
               className="w-64 sm:w-52 h-12 rounded-xl font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
-              aria-label="Live demo"
+              aria-label="Hub"
             >
-              Live demo
+              Testnet
             </a>
           </div>
         </motion.div>
