@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Navbar } from '../../components/Navbar.jsx';
+import { Footer } from '../../components/Footer.jsx';
+import '../../styles/Theme.css';
+import { ScrollUpButton } from '../../components/ScrollUpButton';
+import { Page } from '../../components/Page';
+import ChartAnimation from '../../components/ChartAnimation.jsx';
+
+const pageData = {
+  title: "How Angor Works",
+  subtitle: "Understanding the Angor Process",
+};
+---
+
+<Layout title={pageData.title}>
+  <Navbar client:visible />
+  <Page pageData={pageData} />
+  <ChartAnimation client:visible /> 
+  <Footer />
+  <ScrollUpButton client:visible />
+</Layout>
