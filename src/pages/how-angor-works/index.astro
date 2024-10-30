@@ -6,6 +6,7 @@ import '../../styles/Theme.css';
 import { ScrollUpButton } from '../../components/ScrollUpButton';
 import { Page } from '../../components/Page';
 import ChartAnimation from '../../components/ChartAnimation.jsx';
+import AngorStepsAnimation from '../../components/AngorStepsAnimation';
 
 const pageData = {
   title: "How Angor Works",
@@ -16,7 +17,7 @@ const pageData = {
 <Layout title={pageData.title}>
   <Navbar client:visible />
   <Page pageData={pageData} />
-  <ChartAnimation client:visible /> 
+  <AngorStepsAnimation client:visible /> 
   <Footer />
   <ScrollUpButton client:visible />
 </Layout>
