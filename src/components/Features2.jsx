@@ -45,28 +45,27 @@ export const Features2 = () => (
 
             <ul className="mb-6 text-primaryText">
               <li className="mb-4 flex">
-                <CheckArrowIcon />
-                <span>Tech stack.</span>
+                <span>Tech stack:</span>
               </li>
               <li className="mb-4 flex">
                 <CheckArrowIcon />
-                <span>Multisig 2-of-2 for revocation.</span>
+                <span>Multisig 2-of-2 for revocation</span>
               </li>
               <li className="mb-4 flex">
                 <CheckArrowIcon />
-                <span>Taproot for efficiency.</span>
+                <span>Taproot for efficiency</span>
               </li>
               <li className="mb-4 flex">
                 <CheckArrowIcon />
-                <span>Time-lock contracts (CLTV, CSV).</span>
+                <span>Time-lock contracts (CLTV, CSV) for milestones</span>
               </li>
               <li className="mb-4 flex">
                 <CheckArrowIcon />
-                <span>Nostr protocol.</span>
+                <span>Nostr protocol for comms and web of trust</span>
               </li>
               <li className="mb-4 flex">
                 <CheckArrowIcon />
-                <span>Hash locks.</span>
+                <span>Hash locks for group revocation</span>
               </li>
             </ul>
           </div>
