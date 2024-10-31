@@ -35,7 +35,7 @@ export const Hero = () => {
             <Typewriter
               options={{
                 strings: [
-                  "A decentralized crowdfunding platform built on Bitcoin and Nostr",
+                  "A decentralized crowdfunding protocol built on Bitcoin and Nostr",
                 ],
                 autoStart: true,
                 loop: true,
@@ -62,7 +62,7 @@ export const Hero = () => {
               className="w-64 sm:w-52 h-12 rounded-xl mr-0 sm:mr-4 font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
               aria-label="Hub"
             >
-              Angor Wallet (Testnet)
+              Angor App (Testnet)
             </a>
 
             <div className="relative group">
@@ -72,7 +72,7 @@ export const Hero = () => {
                 aria-label="Testnet"
                 disabled
               >
-                Angor Wallet
+                Angor App
               </a>
               <div className="absolute top-full mt-2 left-0 w-64 sm:w-52 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out transform scale-95 group-hover:scale-100 bg-gray-800 text-white text-sm py-1 px-2 rounded-lg">
                 Coming Soon
