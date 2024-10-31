@@ -5,7 +5,6 @@ import { InvitationModal } from "./InvitationModal";
 import dashboard from "../assets/images/dashboard.gif";
 import Typewriter from "typewriter-effect";
 export const Hero = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   return (
     <section
@@ -141,9 +140,6 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-      {isModalOpen && (
-        <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
-      )}
     </section>
   );
 };
