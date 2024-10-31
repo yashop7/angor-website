@@ -26,7 +26,7 @@ export const Features1 = () => {
             Decentralized crowdfunding
           </h2>
           <p className="mb-10 text-secondaryText leading-loose">
-            We're shaking up how Bitcoin crowdfunding works. Angor is a decentralized platform, uniquely merging the security of Bitcoin with the transparency of Nostr. Investors funds are released in stages through time-lock contracts. Unspent funds can be recovered at any point, ensuring that investors maintain control and aligning the interests of investors and founders.
+            We're shaking up how Bitcoin crowdfunding works. Angor is a decentralized protocol, uniquely merging the security of Bitcoin with the transparency of Nostr. Investors funds are released in stages through time-lock contracts. Unspent funds can be recovered at any point, ensuring that investors maintain control and aligning the interests of investors and founders.
           </p>
           <ul className="mb-6 text-primaryText">
             <li className="mb-4 flex">
