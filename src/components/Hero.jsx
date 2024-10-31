@@ -6,7 +6,7 @@ import dashboard from "../assets/images/dashboard.gif";
 import Typewriter from "typewriter-effect";
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   return (
     <section
       className="w-screen  flex justify-center items-center bg-bgDark1 mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
@@ -47,39 +47,70 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.15 }}
+          className="flex justify-center mt-14 mb-40 sm:mb-40"
         >
-          <div className="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="https://hub.angor.io"
-              className="w-64 sm:w-52 h-12 rounded-xl mr-0 sm:mr-4 font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
+              className="w-full sm:w-52 h-12 rounded-xl font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
               aria-label="Mainnet"
             >
               Angor Hub
             </a>
 
-            <a
-              href="https://test.angor.io"
-              className="w-64 sm:w-52 h-12 rounded-xl mr-0 sm:mr-4 font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
-              aria-label="Hub"
-            >
-              Angor App (Testnet)
-            </a>
-
-            <div className="relative group">
-              <a
-                href="#"
-                className="w-64 sm:w-52 h-12 rounded-xl font-bold text-primaryText border border-solid flex justify-center items-center cursor-not-allowed bg-bgDark2 border-primaryColor opacity-50"
-                aria-label="Testnet"
-                disabled
+            <div className="relative    w-52">
+              <button
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="w-full h-12 rounded-xl font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition px-4 relative"
+                aria-expanded={isDropdownOpen}
+                aria-label="Angor App Dropdown"
               >
-                Angor App
-              </a>
-              <div className="absolute top-full mt-2 left-0 w-64 sm:w-52 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out transform scale-95 group-hover:scale-100 bg-gray-800 text-white text-sm py-1 px-2 rounded-lg">
-                Coming Soon
-              </div>
+                <span>Angor App</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={`h-5 w-5 absolute right-4 transition-transform ${
+                    isDropdownOpen ? "rotate-180" : "rotate-0"
+                  }`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              {isDropdownOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  className="absolute top-full mt-2 left-0 w-full bg-bgDark2 border border-primaryColor rounded-lg shadow-lg z-10 overflow-hidden"
+                >
+                  <a
+                    href="https://test.angor.io"
+                    className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
+                  >
+                    Testnet
+                  </a>
+                  <a
+                    href="#"
+                    className="block px-4 py-2 text-primaryText opacity-50 cursor-not-allowed bg-bgDark2 text-center rounded-b-lg"
+                    aria-disabled="true"
+                  >
+                    Mainnet
+                  </a>
+                </motion.div>
+              )}
             </div>
           </div>
         </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 10, zIndex: 20 }}
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
