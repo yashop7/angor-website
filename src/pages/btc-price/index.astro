@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Navbar } from '../../components/Navbar.jsx';
+import { Footer } from '../../components/Footer.jsx';
+import '../../styles/Theme.css';
+import { ScrollUpButton } from '../../components/ScrollUpButton';
+import { Page } from '../../components/Page';
+import BtcPriceWidget from '../../components/BtcPriceWidget';
+ 
+const pageData = {
+  title: "Bitcoin Price",
+  subtitle: "Real-time BTC Price",
+};
+---
+
+<Layout title={pageData.title}>
+  <Navbar client:visible />
+  <Page pageData={pageData} />
+  <BtcPriceWidget client:visible />
+  <Footer />
+  <ScrollUpButton client:visible />
+</Layout>
