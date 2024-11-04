@@ -47,6 +47,41 @@ const FAQData = [
     answer:
       "Angor uses Bitcoin’s time-lock contracts and a 2-of-2 multisig approach, ensuring the security of funds at each stage.",
   },
+  {
+    question: "How do I recover my unspent funds?",
+    answer:
+      "If you want to exit a project you backed, you can initiate a recovery of any unspent funds through your Angor wallet. This process allows you to exit the project securely.",
+  },
+  {
+    question: "Are there any restrictions/charges for recovering unspent funds?",
+    answer:
+      "There are no charges, except for the miner fee. Angor’s protocol ensures you retain control over your contributions without additional platform fees.",
+  },
+  {
+    question: "How long does it take to recover unspent funds?",
+    answer:
+      "Recovering unspent funds is quick and processed via your Angor wallet. Ensure the recovery transaction fee rate is high enough to get into the target block.",
+  },
+  {
+    question: "What happens if the project is not fully funded?",
+    answer:
+      "If a project doesn’t reach full funding, there are two potential paths: if the founder consents, they can co-sign an exit transaction using the 2-of-2 multisig setup to return funds. If not, the investor may need to engage in a penalty process.",
+  },
+  {
+    question: "When and how are rewards/tokens paid to investors?",
+    answer:
+      "Angor does not manage rewards such as shares or token allocation; this is handled directly between the founder and investor. Typically, founders provide shares or tokens once they receive Bitcoin from a milestone. In the future, token allocation could be facilitated through an atomic swap.",
+  },
+  {
+    question: "How can I get updates on the projects' progress?",
+    answer:
+      "You can monitor project progress on Angor Hub, where updates will be posted using the Nostr relays. This provides real-time access to project statuses and milestones. Notifications can be enabled to alert you to significant developments.",
+  },
+  {
+    question: "How do you select and vet crowdfunding projects?",
+    answer:
+      "Angor is a decentralized protocol, and developers do not participate in the selection or vetting of projects listed on the platform. The responsibility for choosing projects lies with the community and the protocol’s trustless design.",
+  },
 ];
 
 
