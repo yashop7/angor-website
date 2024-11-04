@@ -70,7 +70,7 @@ const FAQData = [
   {
     question: "When and how are rewards/tokens paid to investors?",
     answer:
-      "Angor does not manage rewards such as shares or token allocation; this is handled directly between the founder and investor. Typically, founders provide shares or tokens once they receive Bitcoin from a milestone. In the future, token allocation could be facilitated through an atomic swap.",
+      "Angor does not manage rewards such as shares or token allocation; this is handled directly between the founder and investor.",
   },
   {
     question: "How can I get updates on the projects' progress?",
