@@ -138,6 +138,14 @@ export const Footer = () => {
                       Angor brand
                     </a>
                   </li>
+                  <li className="mb-4">
+                    <a
+                      className="text-gray-400 hover:text-gray-300"
+                      href="https://faucet.angor.io" target="_blank"
+                    >
+                     Bitcoin Faucet
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div className="w-full md:w-1/3 lg:w-auto">
