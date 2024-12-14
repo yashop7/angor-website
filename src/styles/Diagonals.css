@@ -10,6 +10,7 @@
   display: block;
   width: calc(100% + 1.3px);
   height: 200px;
+  @apply sm:h-36 md:h-24; /* Adjust height for responsiveness */
 }
 .hero-title-gradient {
   background: -webkit-linear-gradient(white, #cbdde1);
@@ -31,6 +32,7 @@
   width: calc(100% + 1.3px);
   height: 127px;
   transform: rotateY(180deg);
+  @apply sm:h-24 md:h-20; /* Adjust height for responsiveness */
 }
 
 /* Features Bottom */
@@ -45,6 +47,7 @@
   width: calc(100% + 1.3px);
   height: 127px;
   transform: rotateY(180deg);
+  @apply sm:h-24 md:h-20; /* Adjust height for responsiveness */
 }
 .rubik-moonrocks-regular {
   font-family: "Rubik Moonrocks", sans-serif;
