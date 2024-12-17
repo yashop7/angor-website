@@ -95,15 +95,15 @@ export const Hero = () => {
                     href="https://test.angor.io"
                     className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
                   >
-                    Testnet
+                    Web (Testnet)
                   </a>
-                  <a
+                  {/* <a
                     href="#"
                     className="block px-4 py-2 text-primaryText opacity-50 cursor-not-allowed bg-bgDark2 text-center rounded-b-lg"
                     aria-disabled="true"
                   >
                     Mainnet
-                  </a>
+                  </a> */}
                   <a
                     href="https://github.com/block-core/angor/releases/download/0.0.75/angor-desktop-0.0.75-win-x64.msi"
                     className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
