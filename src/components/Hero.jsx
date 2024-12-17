@@ -104,6 +104,27 @@ export const Hero = () => {
                   >
                     Mainnet
                   </a>
+                  <a
+                    href="https://github.com/block-core/angor/releases/download/0.0.75/angor-desktop-0.0.75-win-x64.msi"
+                    className="block px-4 py-2 text-primaryText opacity-50 cursor-not-allowed bg-bgDark2 text-center rounded-b-lg"
+                    aria-disabled="true"
+                  >
+                    Windows (x64, msi)
+                  </a>
+                  <a
+                    href="https://github.com/block-core/angor/releases/download/0.0.75/angor-desktop-0.0.75-mac-aarch64.dmg"
+                    className="block px-4 py-2 text-primaryText opacity-50 cursor-not-allowed bg-bgDark2 text-center rounded-b-lg"
+                    aria-disabled="true"
+                  >
+                    Mac (Apple Silicon, dmg)
+                  </a>
+                  <a
+                    href="https://github.com/block-core/angor/releases/download/0.0.75/angor-desktop-0.0.75-linux-amd64.AppImage"
+                    className="block px-4 py-2 text-primaryText opacity-50 cursor-not-allowed bg-bgDark2 text-center rounded-b-lg"
+                    aria-disabled="true"
+                  >
+                    Linux (AMD64, AppImage)
+                  </a>
                 </motion.div>
               )}
             </div>
