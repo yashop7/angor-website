@@ -108,19 +108,19 @@ export const Hero = () => {
                     href="https://github.com/block-core/angor/releases/download/0.0.75/angor-desktop-0.0.75-win-x64.msi"
                     className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
                     >
-                    Windows (x64, msi)
+                    Windows
                   </a>
                   <a
                     href="https://github.com/block-core/angor/releases/download/0.0.75/angor-desktop-0.0.75-mac-aarch64.dmg"
                     className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
                     >
-                    Mac (Apple Silicon, dmg)
+                    Mac
                   </a>
                   <a
                     href="https://github.com/block-core/angor/releases/download/0.0.75/angor-desktop-0.0.75-linux-amd64.AppImage"
                     className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
                     >
-                    Linux (AMD64, AppImage)
+                    Linux
                   </a>
                 </motion.div>
               )}
