@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Navbar } from '../components/Navbar.jsx';
+import { Footer } from '../components/Footer.jsx';
+import '../styles/Theme.css';
+import { ScrollUpButton } from '../components/ScrollUpButton';
+import { Page } from '../components/Page';
+import { TermsText } from '../components/TermsText'; // Import the new component
+ 
+const pageData = {
+  title: "Terms & Conditions",
+  subtitle: "Read these terms carefully.",
+};
+---
+
+<Layout title={pageData.title}>
+  <Navbar client:visible />
+  <Page pageData={pageData} />
+  <div class="container mx-auto p-8 text-white space-y-8">
+    <TermsText /> 
+  </div>
+  <Footer />
+  <ScrollUpButton client:visible />
+</Layout>
