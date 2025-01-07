@@ -156,8 +156,31 @@ const AngorPosts = () => {
     return `${key.slice(0, 4)}...${key.slice(-4)}`;
   };
 
+  const formatRelativeTime = (timestamp) => {
+    const now = Date.now();
+    const diff = now - timestamp * 1000;
+    const minutes = Math.floor(diff / 60000);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    const months = Math.floor(days / 30);
+    const years = Math.floor(days / 365);
+
+    if (minutes < 1) return 'just now';
+    if (minutes < 60) return `${minutes} ${minutes === 1 ? 'minute' : 'minutes'} ago`;
+    if (hours < 24) return `${hours} ${hours === 1 ? 'hour' : 'hours'} ago`;
+    if (days < 30) return `${days} ${days === 1 ? 'day' : 'days'} ago`;
+    if (months < 12) return `${months} ${months === 1 ? 'month' : 'months'} ago`;
+    return `${years} ${years === 1 ? 'year' : 'years'} ago`;
+  };
+
   const dateToString = (unixTimestamp) => {
-    return new Date(unixTimestamp * 1000).toLocaleString();
+    return new Date(unixTimestamp * 1000).toLocaleString(undefined, {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
   };
 
   return (
@@ -207,8 +230,11 @@ const AngorPosts = () => {
                       <p className="text-sm text-gray-500 truncate">{postMetadata.nip05}</p>
                     )}
                   </div>
-                  <div className="text-sm text-gray-500">
-                    {dateToString(post.created_at)}
+                  <div 
+                    className="text-xs text-gray-500 hover:text-cyan-600 cursor-help transition-colors"
+                    title={dateToString(post.created_at)}
+                  >
+                    {formatRelativeTime(post.created_at)}
                   </div>
                 </div>
 
