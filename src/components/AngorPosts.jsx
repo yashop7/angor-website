@@ -122,7 +122,7 @@ const AngorPosts = () => {
     };
   }, [initializeNDK, fetchPosts]);
 
-  // Utility functions
+  // Modify parseContent function to center images
   const parseContent = (content) => {
     const urlRegex = /(https?:\/\/[^\s]+)/g;
     const parts = content.split(urlRegex);
@@ -130,13 +130,19 @@ const AngorPosts = () => {
     return parts.map((part, index) => {
       if (part.match(urlRegex)) {
         if (part.match(/\.(jpeg|jpg|gif|png)$/i)) {
-          return <img key={index} src={part} alt="Post content" style={{ maxWidth: '100%', height: 'auto' }} />;
+          return (
+            <div key={index} className="flex justify-center my-2">
+              <img src={part} alt="Post content" style={{ maxWidth: '100%', height: 'auto' }} />
+            </div>
+          );
         } else if (part.match(/\.(mp4|webm|ogg)$/i)) {
           return (
-            <video key={index} controls style={{ maxWidth: '100%', height: 'auto' }}>
-              <source src={part} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <div key={index} className="flex justify-center my-2">
+              <video controls style={{ maxWidth: '100%', height: 'auto' }}>
+                <source src={part} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           );
         } else {
           return <a key={index} href={part} target="_blank" rel="noopener noreferrer">{part}</a>;
@@ -155,7 +161,7 @@ const AngorPosts = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className="max-w-xl mx-auto px-4 py-8">
       <h2 className="text-2xl font-bold text-cyan-700 mb-8">
         Status:
         <span className={`ml-2 text-sm font-normal ${
@@ -207,7 +213,51 @@ const AngorPosts = () => {
                 </div>
 
                 <div className="mt-4 prose prose-cyan max-w-none">
-                  {parseContent(post.content)}
+                  <div className="line-clamp-6">
+                    {parseContent(post.content)}
+                  </div>
+                </div>
+
+                <div className="mt-3 pt-2 border-t border-cyan-100/30 flex items-center justify-start gap-2 text-xs">
+                  <a
+                    href={`https://primal.net/e/${post.id}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2 py-1 rounded-md bg-cyan-600/10 text-cyan-700 hover:bg-cyan-600/20 
+                    transition-all duration-200 flex items-center gap-1 hover:scale-105"
+                  >
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                      <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                    </svg>
+                    Primal
+                  </a>
+                  <a
+                    href={`https://notes.blockcore.net/e/${post.id}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2 py-1 rounded-md bg-cyan-600/10 text-cyan-700 hover:bg-cyan-600/20 
+                    transition-all duration-200 flex items-center gap-1 hover:scale-105"
+                  >
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                      <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                    </svg>
+                    Notes
+                  </a>
+                  <a
+                    href={`https://njump.me/${post.id}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2 py-1 rounded-md bg-cyan-600/10 text-cyan-700 hover:bg-cyan-600/20 
+                    transition-all duration-200 flex items-center gap-1 hover:scale-105"
+                  >
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                      <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                    </svg>
+                    njump
+                  </a>
                 </div>
               </div>
             </div>
