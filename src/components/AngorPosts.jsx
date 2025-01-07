@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import NostrRelayPool from '../services/NostrRelayPool';
+import { nip19 } from 'nostr-tools';
 
 const AngorPosts = () => {
   const [posts, setPosts] = useState([]);
@@ -183,6 +184,15 @@ const AngorPosts = () => {
     });
   };
 
+  const convertToNoteId = (id) => {
+    try {
+      return nip19.noteEncode(id);
+    } catch (error) {
+      console.error('Error converting to note format:', error);
+      return id;
+    }
+  };
+
   return (
     <div className="max-w-xl mx-auto px-4 py-8">
       <h2 className="text-2xl font-bold text-cyan-700 mb-8">
@@ -211,6 +221,7 @@ const AngorPosts = () => {
       <div className="space-y-6">
         {posts.map((post, index) => {
           const postMetadata = metadata[post.pubkey] || {};
+          const noteId = convertToNoteId(post.id);
 
           return (
             <div key={post.id || index} className="bg-[#cbdde1] rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
@@ -244,7 +255,7 @@ const AngorPosts = () => {
                   </div>
                 </div>
 
-                <div className="mt-3 pt-2 border-t border-cyan-100/30 flex items-center justify-start gap-2 text-xs">
+                <div className="mt-3 pt-2 border-t border-cyan-100/30 flex items-center justify-start gap-2 text-xs flex-wrap">
                   <a
                     href={`https://primal.net/e/${post.id}`}
                     target="_blank"
@@ -283,6 +294,18 @@ const AngorPosts = () => {
                       <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
                     </svg>
                     njump
+                  </a>
+                  <a
+                    href={`https://zapper.angor.io/zap?id=${convertToNoteId(post.id)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2 py-1 rounded-md bg-yellow-500/10 text-yellow-600 hover:bg-yellow-500/20 
+                    transition-all duration-200 flex items-center gap-1 hover:scale-105"
+                  >
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" />
+                    </svg>
+                    Zap
                   </a>
                 </div>
               </div>
