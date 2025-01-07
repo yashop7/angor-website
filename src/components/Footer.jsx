@@ -154,6 +154,11 @@ export const Footer = () => {
                 </h3>
                 <ul>
                   <li className="mb-4">
+                    <a className="text-gray-400 hover:text-gray-300" href="/angor-posts">
+                    Angor Posts on Nostr
+                    </a>
+                  </li>
+                  <li className="mb-4">
                     <a className="text-gray-400 hover:text-gray-300" href="/terms">
                       Terms & Conditions
                     </a>

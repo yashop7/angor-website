@@ -1,0 +1,9 @@
+{
+    "relays": [
+        "wss://eden.nostr.land",
+        "wss://nostr.wine",
+        "wss://relay.damus.io",
+        "wss://relay.nostr.band",
+        "wss://relay.snort.social"
+    ]
+}
