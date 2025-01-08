@@ -220,7 +220,7 @@ const ChartWidget = () => {
           : 'h-full'
       }`}
     >
-      <div className="h-12 bg-bgDark2 border-b border-bgDark3 flex flex-wrap justify-between items-center absolute top-0 left-0 right-0 z-10">
+      <div className="h-12 bg-bgDark2 border-b border-bgDark3 flex flex-wrap justify-between items-center absolute top-0 left-0 right-0 z-10 px-2">
         <div className="flex gap-1 sm:gap-2 flex-wrap">
           {['1m', '5m', '15m', '1h', '4h', '1d'].map(tf => (
             <button
