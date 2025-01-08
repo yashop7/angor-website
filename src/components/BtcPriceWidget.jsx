@@ -111,24 +111,24 @@ const BtcPriceWidget = () => {
   }, [initializeWebSocket]);
 
   return (
-    <div className="flex flex-col items-center w-full gap-6">
+    <div className="flex flex-col items-center w-full gap-4 sm:gap-6">
       <div className="text-center">
         <div
           ref={priceRef}
-          className="text-4xl md:text-6xl lg:text-8xl font-extrabold transition-colors duration-500"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-extrabold transition-colors duration-500"
           style={{ color: changeColor }}
         >
           {price}
         </div>
         <div
-          className="text-lg md:text-xl lg:text-2xl mt-2"
+          className="text-base sm:text-lg md:text-xl lg:text-2xl mt-2"
           style={{ color: changeColor }}
         >
           {change}
         </div>
       </div>
       
-      <div className="w-full max-w-[1400px] mx-auto px-4 mb-20">
+      <div className="w-full max-w-[1400px] mx-auto px-2 sm:px-4 mb-10 lg:mb-20 ">
         <div className="w-full bg-bgDark1 rounded-lg shadow-xl overflow-hidden">
           <ChartWidget />
         </div>
