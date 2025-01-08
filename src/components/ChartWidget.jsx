@@ -12,54 +12,51 @@ const ChartWidget = () => {
 
   const toggleFullscreen = () => {
     const element = containerRef.current;
-    const isIOSSafari = /iP(ad|od|hone)/i.test(window.navigator.userAgent) &&
-                       /WebKit/i.test(window.navigator.userAgent) &&
-                       !/(CriOS|FxiOS|OPiOS|mercury)/i.test(window.navigator.userAgent);
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 
     if (!isFullscreen) {
-      if (isIOSSafari) {
-        // iOS Safari specific handling
+      if (isIOS) {
+        // Simple iOS approach
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+        element.style.height = '100vh';
+        element.style.width = '100vw';
         element.style.position = 'fixed';
         element.style.top = '0';
         element.style.left = '0';
-        element.style.width = '100%';
-        element.style.height = '100dvh'; // dynamic viewport height
         element.style.zIndex = '9999';
-        element.style.backgroundColor = 'rgb(6, 30, 36)';
-        document.body.style.position = 'fixed';
-        document.body.style.overflow = 'hidden';
-        
-        // Force reflow for iOS
-        window.scrollTo(0, 0);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-        }, 100);
       } else {
-        // Standard fullscreen API
-        if (element.requestFullscreen) {
-          element.requestFullscreen();
-        } else if (element.webkitRequestFullscreen) {
-          element.webkitRequestFullscreen();
+        try {
+          if (element.requestFullscreen) {
+            element.requestFullscreen();
+          } else if (element.webkitRequestFullscreen) {
+            element.webkitRequestFullscreen();
+          }
+        } catch (err) {
+          console.log('Fullscreen error:', err);
         }
       }
       setIsFullscreen(true);
     } else {
-      if (isIOSSafari) {
-        // Reset iOS Safari specific styles
+      if (isIOS) {
+        // Reset iOS styles
+        document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
+        element.style.height = '';
+        element.style.width = '';
         element.style.position = '';
         element.style.top = '';
         element.style.left = '';
-        element.style.width = '';
-        element.style.height = '';
         element.style.zIndex = '';
-        element.style.backgroundColor = '';
-        document.body.style.position = '';
-        document.body.style.overflow = '';
       } else {
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) {
-          document.webkitExitFullscreen();
+        try {
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+          }
+        } catch (err) {
+          console.log('Exit fullscreen error:', err);
         }
       }
       setIsFullscreen(false);
@@ -217,18 +214,13 @@ const ChartWidget = () => {
   return (
     <div 
       ref={containerRef} 
-      className={`flex flex-col w-full relative ${
+      className={`flex flex-col w-full relative touch-manipulation ${
         isFullscreen 
-          ? 'fixed inset-0 min-h-screen overflow-hidden z-50 bg-[rgb(6,30,36)]' 
+          ? 'fixed inset-0 bg-[rgb(6,30,36)]' 
           : 'h-full'
       }`}
-      style={isFullscreen ? { height: '100dvh' } : {}}
     >
-      <div 
-        className={`${
-          isFullscreen ? 'h-[48px] sticky top-0' : 'h-[48px]'
-        } bg-bgDark2 border-b border-bgDark3 flex flex-wrap justify-between items-center w-full z-10`}
-      >
+      <div className="h-12 bg-bgDark2 border-b border-bgDark3 flex flex-wrap justify-between items-center absolute top-0 left-0 right-0 z-10">
         <div className="flex gap-1 sm:gap-2 flex-wrap">
           {['1m', '5m', '15m', '1h', '4h', '1d'].map(tf => (
             <button
@@ -256,7 +248,7 @@ const ChartWidget = () => {
       <div 
         className={`w-full bg-[rgb(6,30,36)] ${
           isFullscreen 
-            ? 'h-[calc(100dvh-48px)]' // subtract toolbar height
+            ? 'h-[calc(100%-48px)] pt-12' 
             : 'h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]'
         }`} 
         ref={chartContainerRef}
