@@ -39,7 +39,7 @@ export const Footer = () => {
                 <div className="relative group">
                   <a
                     className="inline-block w-10 h-10 p-2 pt-[0.55rem] pl-[0.55rem] outlined-button"
-                    href="https://hub.angor.io/profile/3ab7c2108524b7d1c1c585f09c1b7e194f5e7f225a5bb947f378e074d74e9dbf"
+                    href="/nostr"
                     aria-label="Nostr"
                   >
                     <NostrIcon />

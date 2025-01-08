@@ -7,6 +7,7 @@ const AngorPosts = () => {
   const [metadata, setMetadata] = useState({});
   const [connectionStatus, setConnectionStatus] = useState('disconnected');
   const [isLoading, setIsLoading] = useState(false);
+  const [dateToggles, setDateToggles] = useState({});
   
   const ndkRef = useRef(null);
   const subscriptionRef = useRef(null);
@@ -193,6 +194,13 @@ const AngorPosts = () => {
     }
   };
 
+  const toggleDateFormat = (postId) => {
+    setDateToggles(prev => ({
+      ...prev,
+      [postId]: !prev[postId]
+    }));
+  };
+
   return (
     <div className="max-w-xl mx-auto px-4 py-8">
       <h2 className="text-2xl font-bold text-cyan-700 mb-8">
@@ -222,6 +230,7 @@ const AngorPosts = () => {
         {posts.map((post, index) => {
           const postMetadata = metadata[post.pubkey] || {};
           const noteId = convertToNoteId(post.id);
+          const showFullDate = dateToggles[post.id];
 
           return (
             <div key={post.id || index} className="bg-[#cbdde1] rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
@@ -242,10 +251,13 @@ const AngorPosts = () => {
                     )}
                   </div>
                   <div 
-                    className="text-xs text-gray-500 hover:text-cyan-600 cursor-help transition-colors"
-                    title={dateToString(post.created_at)}
+                    onClick={() => toggleDateFormat(post.id)}
+                    className="text-xs text-gray-500 hover:text-cyan-600 cursor-pointer transition-colors"
                   >
-                    {formatRelativeTime(post.created_at)}
+                    {showFullDate 
+                      ? dateToString(post.created_at)
+                      : formatRelativeTime(post.created_at)
+                    }
                   </div>
                 </div>
 
