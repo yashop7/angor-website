@@ -11,28 +11,53 @@ const ChartWidget = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const toggleFullscreen = () => {
-    if (!document.fullscreenElement) {
-      containerRef.current.requestFullscreen();
+    const element = containerRef.current;
+    
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+      if (element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if (element.webkitRequestFullscreen) { // Safari
+        element.webkitRequestFullscreen();
+      }
       setIsFullscreen(true);
-      // Prevent scrolling in fullscreen
       document.body.style.overflow = 'hidden';
+      
+      // Handle mobile orientation
+      if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock('landscape').catch(() => {
+          // Silently fail if orientation lock is not supported
+        });
+      }
     } else {
-      document.exitFullscreen();
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) { // Safari
+        document.webkitExitFullscreen();
+      }
       setIsFullscreen(false);
-      // Restore scrolling
       document.body.style.overflow = 'auto';
+      
+      // Release orientation lock
+      if (screen.orientation && screen.orientation.unlock) {
+        screen.orientation.unlock();
+      }
     }
   };
 
   useEffect(() => {
     const handleFullscreenChange = () => {
-      const isFs = !!document.fullscreenElement;
+      const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
       setIsFullscreen(isFs);
       document.body.style.overflow = isFs ? 'hidden' : 'auto';
     };
 
     document.addEventListener('fullscreenchange', handleFullscreenChange);
-    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+      document.removeEventListener('webkitfullscreenchange', handleFullscreenChange);
+    };
   }, []);
 
   const changeTimeframe = useCallback(async (newTimeframe) => {
@@ -162,7 +187,7 @@ const ChartWidget = () => {
       ref={containerRef} 
       className={`flex flex-col w-full relative ${
         isFullscreen 
-          ? 'fixed inset-0 h-screen overflow-hidden z-50' 
+          ? 'fixed inset-0 h-screen w-screen overflow-hidden z-50' 
           : 'h-full'
       }`}
     >
@@ -185,7 +210,7 @@ const ChartWidget = () => {
         
         <button
           onClick={toggleFullscreen}
-          className="px-2 sm:px-3 py-1 bg-bgDark3 text-primaryText text-sm sm:text-base rounded hover:bg-bgDark4 flex items-center gap-1 ml-2"
+          className="px-2 sm:px-3 py-1 bg-bgDark3 text-primaryText text-sm sm:text-base rounded hover:bg-bgDark4 flex items-center gap-1 ml-2 select-none touch-manipulation"
         >
           {isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}
         </button>
