@@ -13,31 +13,72 @@ const ChartWidget = () => {
   const toggleFullscreen = () => {
     const element = containerRef.current;
     
-    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-      if (element.requestFullscreen) {
-        element.requestFullscreen();
-      } else if (element.webkitRequestFullscreen) { // Safari
-        element.webkitRequestFullscreen();
+    if (!document.fullscreenElement && 
+        !document.webkitFullscreenElement && 
+        !document.mozFullScreenElement &&
+        !document.msFullscreenElement) {
+      
+      // iOS Safari specific check
+      const isIOSSafari = /iP(ad|od|hone)/i.test(window.navigator.userAgent) &&
+                         /WebKit/i.test(window.navigator.userAgent) &&
+                         !/(CriOS|FxiOS|OPiOS|mercury)/i.test(window.navigator.userAgent);
+
+      if (isIOSSafari) {
+        // iOS Safari specific handling
+        element.style.position = 'fixed';
+        element.style.top = '0';
+        element.style.right = '0';
+        element.style.bottom = '0';
+        element.style.left = '0';
+        element.style.width = '100vw';
+        element.style.height = '100vh';
+        element.style.zIndex = '9999';
+        document.body.style.position = 'fixed';
+      } else {
+        // Standard fullscreen API
+        if (element.requestFullscreen) {
+          element.requestFullscreen();
+        } else if (element.webkitRequestFullscreen) {
+          element.webkitRequestFullscreen();
+        } else if (element.mozRequestFullScreen) {
+          element.mozRequestFullScreen();
+        } else if (element.msRequestFullscreen) {
+          element.msRequestFullscreen();
+        }
       }
+      
       setIsFullscreen(true);
       document.body.style.overflow = 'hidden';
       
-      // Handle mobile orientation
       if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {
-          // Silently fail if orientation lock is not supported
-        });
+        screen.orientation.lock('landscape').catch(() => {});
       }
     } else {
+      // Exit fullscreen
       if (document.exitFullscreen) {
         document.exitFullscreen();
-      } else if (document.webkitExitFullscreen) { // Safari
+      } else if (document.webkitExitFullscreen) {
         document.webkitExitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
       }
+
+      // Reset iOS Safari specific styles
+      element.style.position = '';
+      element.style.top = '';
+      element.style.right = '';
+      element.style.bottom = '';
+      element.style.left = '';
+      element.style.width = '';
+      element.style.height = '';
+      element.style.zIndex = '';
+      document.body.style.position = '';
+      
       setIsFullscreen(false);
       document.body.style.overflow = 'auto';
       
-      // Release orientation lock
       if (screen.orientation && screen.orientation.unlock) {
         screen.orientation.unlock();
       }
@@ -46,17 +87,27 @@ const ChartWidget = () => {
 
   useEffect(() => {
     const handleFullscreenChange = () => {
-      const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
+      const isFs = !!(
+        document.fullscreenElement || 
+        document.webkitFullscreenElement || 
+        document.mozFullScreenElement ||
+        document.msFullscreenElement
+      );
       setIsFullscreen(isFs);
       document.body.style.overflow = isFs ? 'hidden' : 'auto';
     };
 
+    // Add all vendor prefix event listeners
     document.addEventListener('fullscreenchange', handleFullscreenChange);
     document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+    document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+    document.addEventListener('MSFullscreenChange', handleFullscreenChange);
 
     return () => {
       document.removeEventListener('fullscreenchange', handleFullscreenChange);
       document.removeEventListener('webkitfullscreenchange', handleFullscreenChange);
+      document.removeEventListener('mozfullscreenchange', handleFullscreenChange);
+      document.removeEventListener('MSFullscreenChange', handleFullscreenChange);
     };
   }, []);
 
@@ -187,7 +238,7 @@ const ChartWidget = () => {
       ref={containerRef} 
       className={`flex flex-col w-full relative ${
         isFullscreen 
-          ? 'fixed inset-0 h-screen w-screen overflow-hidden z-50' 
+          ? 'fixed inset-0 h-screen w-screen overflow-hidden z-50 bg-[rgb(6,30,36)]' 
           : 'h-full'
       }`}
     >
