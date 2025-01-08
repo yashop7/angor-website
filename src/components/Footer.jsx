@@ -18,52 +18,51 @@ export const Footer = () => {
                 </div>
               </div>
               <p className="mb-10 mt-4 sm:w-[22rem] lg:w-[20rem] xl:w-[24rem] text-gray-400 leading-loose text-center lg:text-left mx-auto lg:mx-0">
-                Angor is a decentralized crowdfunding platform built on Bitcoin
+                Angor is a decentralized crowdfunding protocol built on Bitcoin
               </p>
               <div className="w-36 mx-auto lg:mx-0 flex items-center space-x-2">
-  {/* GitHub Icon with Tooltip */}
-  <div className="relative group">
-    <a
-      className="inline-block w-10 h-10 p-2 pt-[0.55rem] outlined-button"
-      href="https://github.com/block-core/angor-hub"
-      aria-label="Github"
-    >
-      <GithubIcon />
-    </a>
-    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-gray-800 text-white text-xs font-semibold py-1 px-3 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
-      Angor Hub
-    </div>
-  </div>
+                {/* GitHub Icon with Tooltip */}
+                <div className="relative group">
+                  <a
+                    className="inline-block w-10 h-10 p-2 pt-[0.55rem] outlined-button"
+                    href="https://github.com/block-core/angor-hub"
+                    aria-label="Github"
+                  >
+                    <GithubIcon />
+                  </a>
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-gray-800 text-white text-xs font-semibold py-1 px-3 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+                    Angor Hub
+                  </div>
+                </div>
 
-  {/* Nostr Icon with Tooltip */}
-  <div className="relative group">
-    <a
-      className="inline-block w-10 h-10 p-2 pt-[0.55rem] pl-[0.55rem] outlined-button"
-      href="https://hub.angor.io/profile/3ab7c2108524b7d1c1c585f09c1b7e194f5e7f225a5bb947f378e074d74e9dbf"
-      aria-label="Nostr"
-    >
-      <NostrIcon />
-    </a>
-    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-gray-800 text-white text-xs font-semibold py-1 px-3 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
-      Angor Account 
-    </div>
-  </div>
+                {/* Nostr Icon with Tooltip */}
+                <div className="relative group">
+                  <a
+                    className="inline-block w-10 h-10 p-2 pt-[0.55rem] pl-[0.55rem] outlined-button"
+                    href="https://hub.angor.io/profile/3ab7c2108524b7d1c1c585f09c1b7e194f5e7f225a5bb947f378e074d74e9dbf"
+                    aria-label="Nostr"
+                  >
+                    <NostrIcon />
+                  </a>
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-gray-800 text-white text-xs font-semibold py-1 px-3 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+                    Angor Account
+                  </div>
+                </div>
 
-  {/* Second GitHub Icon with Tooltip */}
-  <div className="relative group">
-    <a
-      className="inline-block w-10 h-10 p-2 pt-[0.55rem] outlined-button"
-      href="https://github.com/block-core/angor"
-      aria-label="Github"
-    >
-      <GithubIcon />
-    </a>
-    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-gray-800 text-white text-xs font-semibold py-1 px-3 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
-      Angor App
-    </div>
-  </div>
-</div>
-
+                {/* Second GitHub Icon with Tooltip */}
+                <div className="relative group">
+                  <a
+                    className="inline-block w-10 h-10 p-2 pt-[0.55rem] outlined-button"
+                    href="https://github.com/block-core/angor"
+                    aria-label="Github"
+                  >
+                    <GithubIcon />
+                  </a>
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-gray-800 text-white text-xs font-semibold py-1 px-3 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+                    Angor App
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="w-full lg:w-2/3  lg:pl-16 hidden lg:flex flex-wrap justify-between">
               <div className="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
@@ -76,7 +75,7 @@ export const Footer = () => {
                       className="text-gray-400 hover:text-gray-300"
                       href="https://beta.angor.io"
                     >
-                      Angor app
+                      Angor web app
                     </a>
                   </li>
 
@@ -141,9 +140,10 @@ export const Footer = () => {
                   <li className="mb-4">
                     <a
                       className="text-gray-400 hover:text-gray-300"
-                      href="https://faucet.angor.io" target="_blank"
+                      href="https://faucet.angor.io"
+                      target="_blank"
                     >
-                     Bitcoin Faucet
+                      Bitcoin Faucet
                     </a>
                   </li>
                 </ul>
@@ -154,12 +154,26 @@ export const Footer = () => {
                 </h3>
                 <ul>
                   <li className="mb-4">
-                    <a className="text-gray-400 hover:text-gray-300" href="/angor-posts">
-                    Angor Posts on Nostr
+                    <a
+                      className="text-gray-400 hover:text-gray-300"
+                      href="/how-angor-works"
+                    >
+                      How Angor works
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a className="text-gray-400 hover:text-gray-300" href="/terms">
+                    <a
+                      className="text-gray-400 hover:text-gray-300"
+                      href="/btc-price"
+                    >
+                      BTC Price
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a
+                      className="text-gray-400 hover:text-gray-300"
+                      href="/terms"
+                    >
                       Terms & Conditions
                     </a>
                   </li>
