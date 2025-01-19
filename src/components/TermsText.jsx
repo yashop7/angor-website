@@ -2,8 +2,8 @@ import React from 'react';
 
 export const TermsText = () => (
   <section className="w-full bg-bgDark2 mb-12 lg:my-10 lg:mb-14 text-white">
-    <div className="flex flex-wrap items-center 2xl:w-[1450px] xl:w-[1300px] w-11/12 mx-auto md:pl-4 xl:pr-16 xl:pl-16">
-      <div className="w-full mb-12 lg:mb-0 xl:pl-8">
+    <div className="flex flex-wrap items-center mx-auto md:pl-4 xl:pr-16 xl:pl-16">
+      <div className="w-full mb-12 lg:mb-0">
         <div className="mx-auto lg:mx-auto">
           <h2 className="text-3xl font-extrabold text-primaryText">Terms and Conditions</h2>
           <p className="text-lg leading-relaxed mb-8">Last updated: {new Date().toISOString().split('T')[0]}</p>
