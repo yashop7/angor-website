@@ -178,7 +178,7 @@ export const Footer = () => {
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a className="text-gray-400 hover:text-gray-300" href="#">
+                    <a className="text-gray-400 hover:text-gray-300" href="/privacy">
                       Privacy Policy
                     </a>
                   </li>
