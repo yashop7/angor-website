@@ -5,23 +5,23 @@ import { Footer } from '../components/Footer.jsx';
 import '../styles/Theme.css';
 import { ScrollUpButton } from '../components/ScrollUpButton';
 import { Page } from '../components/Page';
-import { TermsText } from '../components/TermsText';  
+import { PrivacyText } from '../components/PrivacyText';  
 
 const pageData = {
-  title: "Terms & Conditions",
-  subtitle: "User Agreement and Platform Guidelines",
+  title: "Privacy Policy",
+  subtitle: "How we protect your privacy",
   date: new Date().toISOString().split('T')[0],
   content: "",
   footer: "Last updated: " + new Date().toISOString().split('T')[0]
 };
 ---
 
-<Layout title="Terms & Conditions | Angor">
+<Layout title="Privacy Policy | Angor">
   <Navbar client:visible />
   <Page pageData={pageData} />
   <div class="flex justify-center bg-bgDark2">
     <div class="2xl:w-[1280px] xl:w-10/12 w-11/12 mx-auto">
-      <TermsText />
+      <PrivacyText />
     </div>
   </div>
   <Footer />

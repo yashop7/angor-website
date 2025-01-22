@@ -36,7 +36,7 @@ export const Features2 = () => (
           <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
             <span className="block-subtitle">Behind the Tech</span>
             <h2 className="mt-6 mb-8 text-4xl lg:text-5xl block-big-title">
-              Angor has no backend and is verifiable source code
+              Angor has no backend and is open source
             </h2>
             <p className="mb-12 text-secondaryText leading-loose">
               It relies on Bitcoin explorers and Nostr relays, which users can
