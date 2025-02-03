@@ -65,3 +65,88 @@ html {
 .top-most {
   z-index: 10000;
 }
+
+/* App Launcher Menu */
+.app-launcher {
+  position: relative;
+  cursor: pointer;
+}
+
+.app-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 1000;
+  margin-top: 0.5rem;
+  backdrop-filter: blur(16px) brightness(0.7);
+  background: rgba(14, 60, 72, 0.97);
+}
+
+.app-menu.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.app-menu-content {
+  padding: 0.5rem;
+}
+
+.app-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.app-item:hover {
+  background-color: rgb(6 29 35 / 35%);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 12px rgb(6 29 35 / 5%);
+}
+
+.app-item i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  width: 24px;
+  text-align: center;
+  color: #fff;
+  opacity: 0.7;
+  transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.app-item:hover i {
+  color: #009fb5;
+  opacity: 1;
+}
+
+.app-item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-name {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.app-desc {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+@media (min-width: 1024px) {
+  .app-launcher:hover .app-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+}

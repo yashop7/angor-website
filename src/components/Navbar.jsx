@@ -27,16 +27,57 @@ export const Navbar = () => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <a href="/#home" aria-label="Home">
-            <div className="flex justify-start items-center grow basis-0">
-              <div className="text-white mr-2 text-6xl">
-                <AngorLogo />
+          <div className="app-launcher">
+            <a href="/#home" aria-label="Home">
+              <div className="flex justify-start items-center grow basis-0">
+                <div className="text-white mr-2 text-6xl">
+                  <AngorLogo />
+                </div>
+                <div className="text-white font-['Inter'] font-bold text-xl">
+                  Angor
+                </div>
               </div>
-              <div className="text-white font-['Inter'] font-bold text-xl">
-                Angor
+            </a>
+            <div className="app-menu">
+              <div className="app-menu-content">
+                <a href="https://test.angor.io" className="app-item">
+                  <i className="fa-solid fa-rocket"></i>
+                  <div>
+                    <span className="app-name">Angor App</span>
+                    <span className="app-desc">Create and manage funding</span>
+                  </div>
+                </a>
+                <a href="https://blog.angor.io" className="app-item">
+                  <i className="fa-solid fa-newspaper"></i>
+                  <div>
+                    <span className="app-name">Angor Blog</span>
+                    <span className="app-desc">News and updates</span>
+                  </div>
+                </a>
+                <a href="https://hub.angor.io" className="app-item">
+                  <i className="fa-solid fa-compass"></i>
+                  <div>
+                    <span className="app-name">Angor Hub</span>
+                    <span className="app-desc">Discover projects to fund</span>
+                  </div>
+                </a>
+                <a href="https://profile.angor.io" className="app-item">
+                  <i className="fa-solid fa-user"></i>
+                  <div>
+                    <span className="app-name">Angor Profile</span>
+                    <span className="app-desc">Manage your project profile</span>
+                  </div>
+                </a>
+                <a href="https://angor.io" className="app-item">
+                  <i className="fa-solid fa-globe"></i>
+                  <div>
+                    <span className="app-name">Angor Web</span>
+                    <span className="app-desc">Learn about Angor Protocol</span>
+                  </div>
+                </a>
               </div>
             </div>
-          </a>
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
