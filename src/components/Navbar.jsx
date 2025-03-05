@@ -75,6 +75,13 @@ export const Navbar = () => {
                     <span className="app-desc">Learn about Angor Protocol</span>
                   </div>
                 </a>
+                <a href="https://docs.angor.io" className="app-item">
+                  <i className="fa-solid fa-book"></i>
+                  <div>
+                    <span className="app-name">Angor Docs</span>
+                    <span className="app-desc">Angor Documentation</span>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
