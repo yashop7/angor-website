@@ -41,7 +41,7 @@ export const LaunchContent = () => {
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-bgDark3 p-6 rounded-lg">
             <h3 className="text-xl font-bold mb-3 text-primary flex items-center">
-              <span className="flex items-center justify-center bg-primary text-bgDark3 rounded-full w-8 h-8 mr-3">1</span>
+              <span className="flex items-center justify-center  rounded-full w-8 h-8 mr-3">1</span>
               Define Your Project
             </h3>
             <p className="ml-11">
@@ -51,7 +51,7 @@ export const LaunchContent = () => {
           
           <div className="bg-bgDark3 p-6 rounded-lg">
             <h3 className="text-xl font-bold mb-3 text-primary flex items-center">
-              <span className="flex items-center justify-center bg-primary text-bgDark3 rounded-full w-8 h-8 mr-3">2</span>
+              <span className="flex items-center justify-center  rounded-full w-8 h-8 mr-3">2</span>
               Configure Funding
             </h3>
             <p className="ml-11">
@@ -61,7 +61,7 @@ export const LaunchContent = () => {
           
           <div className="bg-bgDark3 p-6 rounded-lg">
             <h3 className="text-xl font-bold mb-3 text-primary flex items-center">
-              <span className="flex items-center justify-center bg-primary text-bgDark3 rounded-full w-8 h-8 mr-3">3</span>
+              <span className="flex items-center justify-center  rounded-full w-8 h-8 mr-3">3</span>
               Secure on Blockchain
             </h3>
             <p className="ml-11">
@@ -71,7 +71,7 @@ export const LaunchContent = () => {
           
           <div className="bg-bgDark3 p-6 rounded-lg">
             <h3 className="text-xl font-bold mb-3 text-primary flex items-center">
-              <span className="flex items-center justify-center bg-primary text-bgDark3 rounded-full w-8 h-8 mr-3">4</span>
+              <span className="flex items-center justify-center  rounded-full w-8 h-8 mr-3">4</span>
               Manage & Engage
             </h3>
             <p className="ml-11">
@@ -131,7 +131,7 @@ export const LaunchContent = () => {
             Use the Angor platform to define your project, secure funding, and manage your venture on the blockchain.
           </p>
           <a href="https://test.angor.io" target="_blank" rel="noopener noreferrer" 
-             className="inline-block bg-primary text-white py-3 px-6 rounded-lg font-bold hover:bg-cyan-500 transition-colors">
+             className="inline-block bg-primary text-white py-3 px-6 rounded-lg font-bold hover:bg-cyan-500 transition-colors border border-primary">
             Create Project on Angor
           </a>
         </div>
