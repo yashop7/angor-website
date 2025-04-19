@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Navbar } from '../components/Navbar.jsx';
+import { Footer } from '../components/Footer.jsx';
+import '../styles/Theme.css';
+import { ScrollUpButton } from '../components/ScrollUpButton';
+import { Page } from '../components/Page';
+import { LaunchContent } from '../components/LaunchContent';  
+
+const pageData = {
+  title: "Launch Your Project",
+  subtitle: "How to create and deploy your project with Angor",
+  content: "",
+  footer: "Last updated: " + new Date().toISOString().split('T')[0]
+};
+---
+
+<Layout title="Launch Your Project | Angor">
+  <Navbar client:visible />
+  <Page pageData={pageData} />
+  <div class="flex justify-center bg-bgDark2">
+    <div class="2xl:w-[1280px] xl:w-10/12 w-11/12 mx-auto">
+      <LaunchContent />
+    </div>
+  </div>
+  <Footer />
+  <ScrollUpButton client:visible />
+</Layout>
