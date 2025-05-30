@@ -6,7 +6,7 @@ import hub from "../assets/images/hub.svg";
 
 export const FeaturesDiagonal = () => {
   return (
-    <section className="lg:mb-16 w-full flex flex-col justify-center items-center bg-bgDark1">
+    <section className="w-full flex flex-col justify-center items-center bg-bgDark1">
  
       <motion.div
         initial={{ opacity: 0, y: 10 }}
@@ -48,20 +48,7 @@ export const FeaturesDiagonal = () => {
         </div>
       </motion.div>
 
-      <div className="shape-divider-top-1665696661 w-full">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-          className="bg-bgDark2 fill-bgDark2"
-        >
-          <path
-            d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
-            className="bg-bgDark1 fill-bgDark1"
-          ></path>
-        </svg>
-      </div>
+ 
     </section>
   );
 };
