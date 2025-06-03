@@ -97,30 +97,17 @@ export const Hero = () => {
                   >
                     Web (Testnet)
                   </a>
-                  {/* <a
-                    href="#"
-                    className="block px-4 py-2 text-primaryText opacity-50 cursor-not-allowed bg-bgDark2 text-center rounded-b-lg"
-                    aria-disabled="true"
-                  >
-                    Mainnet
-                  </a> */}
                   <a
-                    href="https://github.com/block-core/angor/releases/download/0.0.75/angor-desktop-0.0.75-win-x64.msi"
+                    href="https://beta.angor.io"
                     className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
                     >
-                    Windows
+                     Web (Mainnet)
                   </a>
                   <a
-                    href="https://github.com/block-core/angor/releases/download/0.0.75/angor-desktop-0.0.75-mac-aarch64.dmg"
+                    href="https://github.com/block-core/angor/releases"
                     className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
                     >
-                    Mac
-                  </a>
-                  <a
-                    href="https://github.com/block-core/angor/releases/download/0.0.75/angor-desktop-0.0.75-linux-amd64.AppImage"
-                    className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
-                    >
-                    Linux
+                    Desktop
                   </a>
                 </motion.div>
               )}
