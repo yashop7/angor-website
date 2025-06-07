@@ -34,7 +34,7 @@ export const Hero = () => {
             <Typewriter
               options={{
                 strings: [
-                  "A decentralized crowdfunding protocol built on Bitcoin and Nostr",
+                  "A P2P funding protocol built on Bitcoin and Nostr",
                 ],
                 autoStart: true,
                 loop: true,
