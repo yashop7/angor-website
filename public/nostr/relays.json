@@ -1,5 +1,6 @@
 {
     "relays": [
+        "wss://relay.primal.net",
         "wss://eden.nostr.land",
         "wss://nostr.wine",
         "wss://relay.damus.io",
