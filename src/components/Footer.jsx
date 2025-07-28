@@ -2,6 +2,7 @@ import React from 'react';
 import { AngorLogo } from "../assets/logos/AngorLogo";
 import { NostrIcon } from "../assets/icons/NostrIcon";
 import { GithubIcon } from "../assets/icons/GithubIcon";
+import { AngorHubIcon } from "../assets/icons/AngorHubIcon";
 
 export const Footer = () => {
   const footerSections = [
@@ -57,11 +58,11 @@ export const Footer = () => {
                   {/* GitHub Icon with Tooltip */}
                   <div className="relative group">
                     <a
-                      className="inline-block w-10 h-10 p-2 pt-[0.55rem] outlined-button"
+                      className="inline-block w-10 h-10 p-1 outlined-button"
                       href="https://github.com/block-core/angor-hub"
                       aria-label="Github"
                     >
-                      <GithubIcon />
+                      <AngorHubIcon />
                     </a>
                     <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-gray-800 text-white text-xs font-semibold py-1 px-3 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
                       Angor Hub
@@ -71,7 +72,7 @@ export const Footer = () => {
                   {/* Nostr Icon with Tooltip */}
                   <div className="relative group">
                     <a
-                      className="inline-block w-10 h-10 p-2 pt-[0.55rem] pl-[0.55rem] outlined-button"
+                      className="inline-block w-10 h-10 p-1 outlined-button"
                       href="/nostr"
                       aria-label="Nostr"
                     >
@@ -85,7 +86,7 @@ export const Footer = () => {
                   {/* Second GitHub Icon with Tooltip */}
                   <div className="relative group">
                     <a
-                      className="inline-block w-10 h-10 p-2 pt-[0.55rem] outlined-button"
+                      className="inline-block w-10 h-10 p-1 outlined-button"
                       href="https://github.com/block-core/angor"
                       aria-label="Github"
                     >
