@@ -89,23 +89,23 @@ export const Hero = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="top-most absolute top-full mt-2 left-0 w-full bg-lightbgLight2 dark:bg-bgDark2 border border-primaryColor rounded-lg shadow-lg z-10 overflow-hidden"
+                  className="top-most absolute top-full mt-2 left-0 w-full bg-bgDark2 rounded-lg shadow-lg z-10 overflow-hidden"
                 >
                   <a
                     href="https://test.angor.io"
-                    className="block px-4 py-2 text-lightprimaryText dark:text-primaryText hover:bg-lightbgLight3 dark:hover:bg-bgDark3 transition text-center rounded-t-lg"
+                    className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
                   >
                     Web (Testnet)
                   </a>
                   <a
                     href="https://beta.angor.io"
-                    className="block px-4 py-2 text-lightprimaryText dark:text-primaryText hover:bg-lightbgLight3 dark:hover:bg-bgDark3 transition text-center rounded-t-lg"
+                    className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
                     >
                      Web (Mainnet)
                   </a>
                   <a
                     href="https://github.com/block-core/angor/releases"
-                    className="block px-4 py-2 text-lightprimaryText dark:text-primaryText hover:bg-lightbgLight3 dark:hover:bg-bgDark3 transition text-center rounded-t-lg"
+                    className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
                     >
                     Desktop
                   </a>
