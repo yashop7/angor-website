@@ -51,7 +51,7 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="https://hub.angor.io"
-              className="w-full sm:w-52 h-12 rounded-xl font-bold text-lightprimaryText dark:text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-lightbgLight2 dark:bg-bgDark2 hover:bg-lightbgLight3 dark:hover:bg-bgDark3 border-primaryColor transition"
+              className="w-full sm:w-52 h-12 rounded-xl font-bold text-primaryText flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 transition"
               aria-label="Mainnet"
             >
               Angor Hub
@@ -60,7 +60,7 @@ export const Hero = () => {
             <div className="relative    w-52">
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="w-full h-12 rounded-xl font-bold text-lightprimaryText dark:text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-lightbgLight2 dark:bg-bgDark2 hover:bg-lightbgLight3 dark:hover:bg-bgDark3 border-primaryColor transition px-4 relative"
+                className="w-full h-12 rounded-xl font-bold text-primaryText flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 transition px-4 relative"
                 aria-expanded={isDropdownOpen}
                 aria-label="Angor App Dropdown"
               >

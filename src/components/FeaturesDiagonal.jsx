@@ -25,14 +25,14 @@ export const FeaturesDiagonal = () => {
   }, []);
 
   return (
-    <section className="w-full flex flex-col justify-center items-center bg-white dark:bg-bgDark1">
+    <section className="w-full flex flex-col justify-center items-center bg-lightbgLight2 dark:bg-bgDark1">
  
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className="2xl:w-[1150px] xl:w-[1050px] md:w-4/5 flex justify-center bg-white dark:bg-bgDark1 pt-12 lg:pt-24 pb-8 lg:pb-20 mx-auto lg:flex-row flex-col">
+        <div className="2xl:w-[1150px] xl:w-[1050px] md:w-4/5 flex justify-center pt-12 lg:pt-24 pb-8 lg:pb-20 mx-auto lg:flex-row flex-col">
           <div className="w-3/4 lg:w-1/2 flex flex-col lg:mx-unset mx-auto">
             <span className="block-subtitle">Where connections happen</span>
             <h2 className="mt-10 mb-8 text-2xl lg:text-3xl block-big-title">
