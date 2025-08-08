@@ -1,22 +1,22 @@
 /* Typography */
 
 .block-title {
-  @apply text-primaryText text-3xl font-bold tracking-normal sm:text-4xl md:text-5xl;
+  @apply text-black dark:text-primaryText text-3xl font-bold tracking-normal sm:text-4xl md:text-5xl;
 }
 .block-big-title {
-  @apply text-primaryText text-4xl xl:text-5xl font-bold tracking-normal sm:text-5xl md:text-6xl;
+  @apply text-black dark:text-primaryText text-3xl lg:text-4xl xl:text-5xl font-bold tracking-normal;
 }
 .block-subtitle {
   @apply text-xs text-secondaryColor tracking-wider font-bold uppercase sm:text-sm md:text-base;
 }
 .content-title {
-  @apply text-primaryText text-lg font-bold tracking-normal sm:text-xl md:text-2xl;
+  @apply text-gray-900 dark:text-primaryText text-lg font-bold tracking-normal sm:text-xl md:text-2xl;
 }
 .content-text-white {
-  @apply text-primaryText text-base leading-relaxed sm:text-lg md:text-xl;
+  @apply text-gray-900 dark:text-primaryText text-base leading-relaxed sm:text-lg md:text-xl;
 }
 .content-text-gray {
-  @apply text-gray-400 text-base sm:text-lg md:text-xl;
+  @apply text-gray-600 dark:text-gray-400 text-base sm:text-lg md:text-xl;
 }
 
 /* Borders */
@@ -31,7 +31,7 @@
 /* Buttons */
 
 .contained-button {
-  @apply rounded-lg font-bold bg-primaryColor text-primaryText flex justify-center items-center hover:bg-[#086c81] cursor-pointer transition sm:text-lg md:text-xl;
+  @apply rounded-lg font-bold bg-secondaryColor/90 hover:bg-secondaryColor dark:bg-bgDark3 dark:hover:bg-bgDark3Hover text-primaryText flex justify-center items-center cursor-pointer sm:text-lg md:text-xl shadow-md hover:shadow-lg;
 }
 .outlined-button {
   @apply text-primaryText main-border-gray rounded-xl bg-bgDark2 hover:bg-bgDark3 border-gray-700 text-sm sm:text-base md:text-lg;
@@ -76,7 +76,7 @@ html {
   position: absolute;
   top: 100%;
   left: 0;
-  border: 1px solid #374151;
+  border: 1px solid #d1d5db;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   width: 320px;
@@ -85,7 +85,15 @@ html {
   transition: all 0.2s ease;
   z-index: 1000;
   margin-top: 0.5rem;
-  backdrop-filter: blur(16px) brightness(0.7);
+  backdrop-filter: blur(16px);
+  background: #ffffff;
+}
+
+.dark .app-menu {
+  border-color: #4b5563;
+}
+
+.dark .app-menu {
   background: rgba(14, 60, 72, 0.97);
 }
 
@@ -102,16 +110,24 @@ html {
   display: flex;
   align-items: center;
   padding: 0.75rem;
-  color: #fff;
+  color: #023540;
   text-decoration: none;
   border-radius: 6px;
   transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+.dark .app-item {
+  color: #ffffff;
+}
+
 .app-item:hover {
-  background-color: rgb(6 29 35 / 35%);
+  background-color: #f0f2f5;
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 4px 12px rgb(6 29 35 / 5%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark .app-item:hover {
+  background-color: #14505f;
 }
 
 .app-item i {
@@ -119,14 +135,22 @@ html {
   margin-right: 1rem;
   width: 24px;
   text-align: center;
-  color: #fff;
+  color: #023540;
   opacity: 0.7;
   transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+.dark .app-item i {
+  color: #ffffff;
+}
+
 .app-item:hover i {
-  color: #009fb5;
+  color: #023540;
   opacity: 1;
+}
+
+.dark .app-item:hover i {
+  color: #ffffff;
 }
 
 .app-item div {

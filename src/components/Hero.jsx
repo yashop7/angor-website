@@ -8,7 +8,7 @@ export const Hero = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   return (
     <section
-      className="w-screen  flex justify-center items-center bg-bgDark1 mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
+      className="w-screen  flex justify-center items-center bg-lightbgLight dark:bg-bgDark1 mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
       id="home"
     >
       <div className="w-full md:w-[800px] xl:w-[900px] flex flex-col justify-center items-center pt-16 md:pt-16 lg:pt-20 text-center">
@@ -17,8 +17,8 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.05 }}
         >
-          <div className="rubik-moonrocks-regular text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-bold tracking-wide text-primaryText px-8 sm:px-8 md:px-20 lg:px-4 sm:mt-32 mt-16">
-            <h1>non custodial crowdfunding</h1>
+          <div className="rubik-moonrocks-regular text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-bold tracking-wide text-lightprimaryText dark:text-primaryText px-8 sm:px-8 md:px-20 lg:px-4 sm:mt-32 mt-16">
+            <h1>Non custodial crowdfunding</h1>
           </div>
           <h1 className="rubik-moonrocks-regular mt-2 sm:mt-2 text-3xl sm:text-5xl lg:text-6xl xl:text-6xl font-bold tracking-wide text-secondaryColor px-8 sm:px-20 md:px-24 lg:px-24">
             with Angor
@@ -30,7 +30,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <h2 className="text-secondaryText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-30 ">
+          <h2 className="text-lightsecondaryText dark:text-secondaryText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-30 ">
             <Typewriter
               options={{
                 strings: [
@@ -46,12 +46,12 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="flex justify-center mt-14 mb-40 sm:mb-40"
+          className="flex justify-center mt-14 mb-16 sm:mb-40"
         >
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="https://hub.angor.io"
-              className="w-full sm:w-52 h-12 rounded-xl font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
+              className="w-full sm:w-52 h-12 rounded-xl font-bold text-lightprimaryText dark:text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-lightbgLight2 dark:bg-bgDark2 hover:bg-lightbgLight3 dark:hover:bg-bgDark3 border-primaryColor transition"
               aria-label="Mainnet"
             >
               Angor Hub
@@ -60,7 +60,7 @@ export const Hero = () => {
             <div className="relative    w-52">
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="w-full h-12 rounded-xl font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition px-4 relative"
+                className="w-full h-12 rounded-xl font-bold text-lightprimaryText dark:text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-lightbgLight2 dark:bg-bgDark2 hover:bg-lightbgLight3 dark:hover:bg-bgDark3 border-primaryColor transition px-4 relative"
                 aria-expanded={isDropdownOpen}
                 aria-label="Angor App Dropdown"
               >
@@ -89,23 +89,23 @@ export const Hero = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="top-most absolute top-full mt-2 left-0 w-full bg-bgDark2 border border-primaryColor rounded-lg shadow-lg z-10 overflow-hidden"
+                  className="top-most absolute top-full mt-2 left-0 w-full bg-lightbgLight2 dark:bg-bgDark2 border border-primaryColor rounded-lg shadow-lg z-10 overflow-hidden"
                 >
                   <a
                     href="https://test.angor.io"
-                    className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
+                    className="block px-4 py-2 text-lightprimaryText dark:text-primaryText hover:bg-lightbgLight3 dark:hover:bg-bgDark3 transition text-center rounded-t-lg"
                   >
                     Web (Testnet)
                   </a>
                   <a
                     href="https://beta.angor.io"
-                    className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
+                    className="block px-4 py-2 text-lightprimaryText dark:text-primaryText hover:bg-lightbgLight3 dark:hover:bg-bgDark3 transition text-center rounded-t-lg"
                     >
                      Web (Mainnet)
                   </a>
                   <a
                     href="https://github.com/block-core/angor/releases"
-                    className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
+                    className="block px-4 py-2 text-lightprimaryText dark:text-primaryText hover:bg-lightbgLight3 dark:hover:bg-bgDark3 transition text-center rounded-t-lg"
                     >
                     Desktop
                   </a>
@@ -135,11 +135,11 @@ export const Hero = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1200 120"
               preserveAspectRatio="none"
-              className="bg-bgDark2"
+              className="bg-lightbgLight2 dark:bg-bgDark2"
             >
               <path
                 d="M1200 0L0 0 598.97 114.72 1200 0z"
-                className="shape-fill bg-bgDark1  fill-bgDark1"
+                className="shape-fill bg-lightbgLight dark:bg-bgDark1 fill-lightbgLight dark:fill-bgDark1"
               ></path>
             </svg>
           </div>
