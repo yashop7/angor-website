@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-import angorFlow from "../assets/images/angor-flow.png";
-import angorFlowLight from "../assets/images/angor-flow-light.png";
-
+import angorflow from "../assets/images/angorflow.svg";
 export const AngorFlow = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -45,7 +43,7 @@ export const AngorFlow = () => {
           <div className="flex justify-center">
             <div className="w-full max-w-2xl">
               <img
-                src={isDarkMode ? angorFlow.src : angorFlowLight.src}
+                src={angorflow.src}
                 alt="Angor Flow Diagram"
                 className="rounded-2xl"
               />
